@@ -5,3 +5,40 @@
   padding: 0 15px;
   width: 100%;
 }
+
+/* HEADER */
+.header {
+  background-color: var(--gray-colors-800);
+  height: 8.8rem;
+  display: flex;
+}
+
+.header .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav ul {
+  align-items: center;
+  display: flex;
+  margin-right: 3.2rem;
+}
+
+.header-nav ul li + li {
+  margin-left: 3.2rem;
+}
+
+.header-nav ul a {
+  background-color: #e6ebf2;
+  color: var(--gray-colors-400);
+  font-family: var(--second-font);
+  font-size: 1.5rem;
+  letter-spacing: -0.01rem;
+  line-height: 100%;
+  padding: 1.25rem 2.4rem;
+}
