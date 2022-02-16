@@ -1,10 +1,11 @@
 :root {
   --brand-colors-pink: #f67acb;
   --gray-colors-200: #1c1d1f;
-  --gray-colors-400: #5c6066;
   --gray-colors-300: #393c40;
+  --gray-colors-400: #5c6066;
+  --gray-colors-800: #f7f8fa;
   --white: #fff;
 
-  --title-font: 'Sora', sans-serif;
-  --paragraph-font: 'Inter', sans-serif;
+  --main-font: 'Inter', sans-serif;
+  --second-font: 'Sora', sans-serif;
 }
