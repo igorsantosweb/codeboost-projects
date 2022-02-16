@@ -30,3 +30,7 @@ img {
 button {
   cursor: pointer;
 }
+
+p {
+  line-height: 150%;
+}
