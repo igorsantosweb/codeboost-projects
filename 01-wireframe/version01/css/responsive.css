@@ -17,10 +17,54 @@
   .header-btn-mobile {
     display: block;
   }
+
+  /* HERO */
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .hero-left h1,
+  .hero-left p {
+    text-align: center;
+  }
+
+  .hero-left p {
+    max-width: inherit;
+  }
+
+  .hero-left button {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero-right {
+    min-width: auto;
+  }
 }
 @media (max-width: 768px) {
 }
 @media (max-width: 680px) {
 }
 @media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* HEADER */
+  header .logo {
+    max-width: 130px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero-left h1 {
+    font-size: 4.2rem;
+  }
+
+  .hero-left p {
+    margin-bottom: 3rem;
+  }
 }
