@@ -1,6 +1,22 @@
 @media (max-width: 1200px) {
+  /* HEADER */
+  .header-nav ul {
+    margin-right: 1.2rem;
+  }
+
+  .header-nav ul li + li {
+    margin-left: 1.2rem;
+  }
 }
 @media (max-width: 991px) {
+  /* HEADER */
+  .header-nav {
+    display: none;
+  }
+
+  .header-btn-mobile {
+    display: block;
+  }
 }
 @media (max-width: 768px) {
 }
