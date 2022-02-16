@@ -4,4 +4,7 @@
   --gray-colors-400: #5c6066;
   --gray-colors-300: #393c40;
   --white: #fff;
+
+  --title-font: 'Sora', sans-serif;
+  --paragraph-font: 'Inter', sans-serif;
 }
