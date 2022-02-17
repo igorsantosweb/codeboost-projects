@@ -131,4 +131,13 @@
     margin-bottom: 4rem;
     padding-bottom: 4rem;
   }
+
+  /* NEWSLETTER */
+  .newsletter {
+    padding: 4rem 0;
+  }
+
+  .newsletter-content div {
+    margin-bottom: 3rem;
+  }
 }
