@@ -95,6 +95,20 @@
   padding: 10.4rem 0 12rem;
 }
 
+.feature .title h2 {
+  margin-bottom: 0.8rem;
+}
+
+.feature .title p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-main {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 10.4rem;
+  padding-bottom: 12.2rem;
+}
+
 .feature-main .title {
   margin-bottom: 4.8rem;
 }
@@ -102,15 +116,6 @@
 .feature-main .title h2,
 .feature-main .title p {
   text-align: center;
-}
-
-.feature-main .title h2 {
-  margin-bottom: 0.8rem;
-}
-
-.feature .title p {
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .feature-cards {
@@ -159,4 +164,32 @@
 
 .feature-cards-item-info p {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-area-top {
+  align-items: center;
+  display: flex;
+  grid-gap: 3.2rem;
+  justify-content: space-between;
+  margin-bottom: 5.6rem;
+}
+
+.feature-area-top .title {
+  max-width: 52rem;
+}
+
+.feature-area-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+.feature-area-thumb-item {
+  align-items: center;
+  background-color: var(--gray-colors-200);
+  display: inline-flex;
+  height: 11.2rem;
+  justify-content: center;
+  max-width: 100%;
+  width: calc((100% / 6) - 2.67rem);
 }
