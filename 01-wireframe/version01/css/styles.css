@@ -180,8 +180,9 @@
 
 .feature-area-thumb {
   display: flex;
-  flex-wrap: wrap;
   gap: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .feature-area-thumb-item {
