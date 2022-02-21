@@ -233,3 +233,98 @@
 .newsletter-content button {
   padding: 2rem 4rem;
 }
+
+/* FOOTER */
+.footer {
+  background-color: var(--gray-colors-100);
+  padding: 8.8rem 0 4rem;
+}
+
+.footer p,
+.footer a,
+.footer a span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
+}
+
+.footer-main {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 3.2rem;
+  justify-content: space-between;
+  padding-bottom: 7.2rem;
+  margin-bottom: 4rem;
+}
+
+.footer-main-left {
+  max-width: 281px;
+}
+
+.footer-main-left p {
+  margin-top: 3.5rem;
+  line-height: 150%;
+}
+
+.footer-main-right {
+  display: flex;
+  gap: 3.2rem;
+  justify-content: space-between;
+  max-width: 77.7rem;
+  width: 100%;
+}
+
+.footer-main-right strong,
+.footer-main-right a {
+  font-family: var(--second-font);
+}
+
+.footer-main-right strong {
+  color: var(--white);
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  line-height: 125%;
+  margin-bottom: 2.4rem;
+}
+
+.footer-main-right li + li {
+  margin-top: 3.2rem;
+}
+
+.footer-main-right li a {
+  display: block;
+  line-height: 105%;
+  transition: 0.3s;
+}
+
+.footer-main-right li a:hover,
+.footer-main-right li a:hover span {
+  color: var(--white);
+}
+
+.footer-main-right .networks li a {
+  align-items: center;
+  display: flex;
+}
+
+.footer-main-right .networks li a span {
+  margin-left: 0.8rem;
+}
+
+.footer-bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom div {
+  align-items: center;
+  display: flex;
+}
+
+.footer-bottom div span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
+  margin-right: 0.8rem;
+}
