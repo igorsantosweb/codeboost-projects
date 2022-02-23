@@ -257,7 +257,11 @@
 }
 
 .footer-main-left {
-  max-width: 281px;
+  max-width: 28.1rem;
+}
+
+.footer-main-left a {
+  display: block;
 }
 
 .footer-main-left p {
