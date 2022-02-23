@@ -144,7 +144,7 @@
 
   /* FEATURE */
   .feature {
-    padding-bottom: 4rem;
+    padding: 4rem 0;
   }
 
   .feature-main {
@@ -162,7 +162,8 @@
   }
 
   /* footer */
-  .footer {
+  .footer,
+  .footer-main {
     padding: 4rem 0;
   }
 
