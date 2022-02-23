@@ -152,6 +152,15 @@
     padding-bottom: 4rem;
   }
 
+  .feature-cards-item {
+    height: auto;
+    padding: 2rem 2rem 2.5rem;
+  }
+
+  .feature-cards-item-icon {
+    margin-bottom: 2rem;
+  }
+
   /* NEWSLETTER */
   .newsletter {
     padding: 4rem 0;
@@ -161,7 +170,7 @@
     margin-bottom: 3rem;
   }
 
-  /* footer */
+  /* FOOTER */
   .footer,
   .footer-main {
     padding: 4rem 0;
