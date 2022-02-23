@@ -16,12 +16,49 @@
 
 @media (max-width: 991px) {
   /* HEADER */
-  .header-nav {
-    display: none;
-  }
-
   .header-btn-mobile {
     display: block;
+  }
+
+  .header .logo {
+    z-index: 999;
+  }
+
+  .header-nav {
+    background-color: #e6ebf3;
+    display: block;
+    left: 0rem;
+    padding-top: 8rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .header-nav ul li,
+  .header-nav ul a {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header-nav ul {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 0;
+    width: 170px;
+  }
+
+  .header-nav ul li + li {
+    margin-left: 0;
+  }
+
+  .header-nav ul a {
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 1.5rem;
+  }
+
+  .header-nav .btn {
+    text-align: left;
+    padding: 2rem 1.5rem;
+    width: 170px;
   }
 
   /* HERO */
