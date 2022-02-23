@@ -26,11 +26,15 @@
 
   .header-nav {
     background-color: #e6ebf3;
-    display: block;
+    display: none;
     left: 0rem;
     padding-top: 8rem;
     position: absolute;
     top: 0;
+  }
+
+  .header-nav.active {
+    display: block;
   }
 
   .header-nav ul li,
