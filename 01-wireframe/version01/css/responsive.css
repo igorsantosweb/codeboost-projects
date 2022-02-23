@@ -111,6 +111,12 @@
   .feature-area-thumb-item {
     width: calc((100% / 2) - 0.8rem);
   }
+
+  /* FOOTER */
+  .footer-bottom {
+    gap: 0.8rem;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -156,4 +162,21 @@
   }
 
   /* footer */
+  .footer {
+    padding: 4rem 0;
+  }
+
+  .footer-main-right {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-main-right strong,
+  .footer-main-right li a {
+    text-align: center;
+  }
+
+  .footer-main-right .networks li a {
+    justify-content: center;
+  }
 }
