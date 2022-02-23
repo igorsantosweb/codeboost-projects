@@ -3,6 +3,7 @@ function handleClickBtnMobile() {
   const nav = document.querySelector('[data-menu="nav"]');
 
   function toggleMenuMobile() {
+    btn.classList.toggle('active');
     nav.classList.toggle('active');
   }
 

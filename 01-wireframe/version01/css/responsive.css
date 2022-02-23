@@ -17,7 +17,8 @@
 @media (max-width: 991px) {
   /* HEADER */
   .header-btn-mobile {
-    display: block;
+    align-items: center;
+    display: flex;
   }
 
   .header .logo {
@@ -25,9 +26,10 @@
   }
 
   .header-nav {
+    animation: moveMenuMobile forwards 0.3s;
     background-color: #e6ebf3;
+    box-shadow: 1px 1px 3px #ccc;
     display: none;
-    left: 0rem;
     padding-top: 8rem;
     position: absolute;
     top: 0;
@@ -35,6 +37,17 @@
 
   .header-nav.active {
     display: block;
+  }
+
+  @keyframes moveMenuMobile {
+    from {
+      opacity: 0;
+      left: -150%;
+    }
+    to {
+      opacity: 1;
+      left: 0%;
+    }
   }
 
   .header-nav ul li,
