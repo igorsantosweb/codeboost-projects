@@ -16,11 +16,6 @@
 
 @media (max-width: 991px) {
   /* HEADER */
-  .header-btn-mobile {
-    align-items: center;
-    display: flex;
-  }
-
   .header .logo {
     z-index: 999;
   }
@@ -28,7 +23,7 @@
   .header-nav {
     animation: moveMenuMobile forwards 0.3s;
     background-color: #e6ebf3;
-    box-shadow: 1px 1px 3px #ccc;
+    box-shadow: 1px 1px 3px #656565;
     display: none;
     padding-top: 8rem;
     position: absolute;
@@ -60,7 +55,7 @@
     align-items: flex-start;
     flex-direction: column;
     margin-right: 0;
-    width: 170px;
+    width: 208px;
   }
 
   .header-nav ul li + li {
@@ -73,9 +68,60 @@
   }
 
   .header-nav .btn {
-    text-align: left;
     padding: 2rem 1.5rem;
-    width: 170px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-btn-mobile {
+    align-items: center;
+    display: flex;
+  }
+
+  .header-btn-mobile div {
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+    width: 1.6rem;
+  }
+
+  .header-btn-mobile div span {
+    background-color: var(--gray-colors-400);
+    border-radius: 10px;
+    height: 0.3rem;
+    display: inline-block;
+    position: absolute;
+    transition: 0.2s;
+    width: 1.6rem;
+  }
+
+  .header-btn-mobile div span:nth-child(2) {
+    top: 0.6rem;
+  }
+
+  .header-btn-mobile div span:nth-child(3) {
+    top: 1.2rem;
+  }
+
+  .header-btn-mobile.active div span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0.5rem;
+  }
+
+  .header-btn-mobile.active div span:nth-child(2) {
+    opacity: 0;
+    display: none;
+  }
+
+  .header-btn-mobile.active div span:nth-child(3) {
+    top: 0.5rem;
+    transform: rotate(-45deg);
+  }
+
+  .header-btn-mobile span.text {
+    font-family: var(--second-font);
   }
 
   /* HERO */
@@ -183,9 +229,13 @@
     max-width: 130px;
   }
 
+  .header-nav ul {
+    width: 160px;
+  }
+
   /* HERO */
   .hero {
-    padding: 4rem 0;
+    padding: 12.8rem 0 4rem;
   }
 
   .hero-left h1 {

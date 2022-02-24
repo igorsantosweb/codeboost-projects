@@ -9,8 +9,10 @@
 /* HEADER */
 .header {
   background-color: var(--gray-colors-800);
-  height: 8.8rem;
   display: flex;
+  height: 8.8rem;
+  position: fixed;
+  width: 100%;
 }
 
 .header .container {
@@ -54,46 +56,9 @@
   display: none;
 }
 
-.header-btn-mobile div {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5px;
-}
-
-.header-btn-mobile span.text {
-  font-family: var(--second-font);
-}
-
-.header-btn-mobile div span {
-  background-color: var(--gray-colors-400);
-  height: 0.4rem;
-  display: inline-block;
-  transition: 0.2s;
-  width: 1.6rem;
-}
-
-.header-btn-mobile div span:not(:first-child) {
-  margin-top: 1.5px;
-}
-
-.header-btn-mobile.active div span:nth-child(1) {
-  transform: rotate(45deg);
-  height: 0.3rem;
-}
-
-.header-btn-mobile.active div span:nth-child(2) {
-  opacity: 0;
-}
-
-.header-btn-mobile.active div span:nth-child(3) {
-  transform: rotate(-45deg);
-  height: 0.3rem;
-  margin-top: -7.5px;
-}
-
 /* HERO */
 .hero {
-  padding: 7.2rem 0;
+  padding: 16rem 0 7.2rem;
 }
 
 .hero .container {
