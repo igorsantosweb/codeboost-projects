@@ -36,22 +36,25 @@ button:hover {
 
 /* BOX INFO */
 .box-info {
-  padding: 4.1rem 3.4rem 4.1rem 0;
+  padding: 4.1rem 1.6rem 4.1rem 2.2rem;
   max-width: 28rem;
   min-height: 32.3rem;
 }
 
 .box-info.edit {
-  background-color: #c5bedc;
+  background-color: rgba(197, 190, 220, 0.1);
   border-radius: 1.2rem;
   padding-left: 4.2rem;
+  padding-right: 3.4rem;
 }
 
 .box-info-icon {
-  background-color: #c5bedc;
+  align-items: center;
+  background-color: rgba(197, 190, 220, 0.1);
   border-radius: 1.2rem;
+  display: flex;
   height: 64px;
-  padding: 2rem;
+  justify-content: center;
   width: 64px;
 }
 
@@ -60,11 +63,11 @@ button:hover {
 }
 
 .box-info-icon img {
-  max-height: 2.4rem;
-  max-width: 2.4rem;
+  max-height: 3.2rem;
+  max-width: 3.2rem;
 }
 
-.box-info-subject {
+.box-info-subject strong {
   color: var(--primary-color);
   display: block;
   font-family: var(--first-font);
@@ -74,9 +77,13 @@ button:hover {
   margin: 3rem 0 2rem;
 }
 
-.box-info-text {
+.box-info-text p {
   color: var(--complementary-color);
-  font-family: var(--first-font);
   font-size: 1.6rem;
   line-height: 165%;
+  max-width: 24rem;
+}
+
+.box-info-text.edit p {
+  max-width: 20.5rem;
 }
