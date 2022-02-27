@@ -16,6 +16,7 @@ html {
 
 a {
   text-decoration: none;
+  font-family: var(--first-font);
 }
 
 ul {
@@ -29,4 +30,12 @@ img {
 
 button {
   cursor: pointer;
+  font-family: var(--first-font);
+}
+
+p {
+  color: var(--white);
+  font-family: var(--second-font);
+  font-size: 1.8rem;
+  line-height: 150%;
 }
