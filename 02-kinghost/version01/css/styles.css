@@ -1,0 +1,44 @@
+/* CONTAINER */
+.container {
+  padding: 0 1.5rem;
+  max-width: calc(121.5rem + 1.5rem);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--primary-color);
+  height: 11.9rem;
+  display: flex;
+}
+
+.header .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav ul,
+.header-nav ul a {
+  align-items: center;
+  display: flex;
+}
+
+.header-nav ul li + li {
+  margin-left: 5.6rem;
+}
+
+.header-nav ul a span {
+  color: var(--white);
+  margin-left: 1.6rem;
+  transition: 0.3s;
+}
+
+.header-nav ul li.edit a span {
+  font-weight: bold;
+}
+
+.header-nav ul a:hover span {
+  color: var(--accent-color);
+}
