@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #5f3ca1;
+  --primary-light-color: #7b5aba;
+  --accent-color: #ffbf00;
+  --title-session-color: #453f51; /* gray 01 */
+  --complementary-color: #5e5570; /* gray 02 */
+  --white: #fff;
+
+  --first-font: 'Lato', sans-serif;
+  --second-font: 'PT Sans', sans-serif;
+}
