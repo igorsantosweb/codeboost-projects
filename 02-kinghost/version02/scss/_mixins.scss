@@ -1,0 +1,91 @@
+@mixin responsive($screenSize) {
+  @if ($screenSize == '1200') {
+    @media (max-width: '1200px') {
+      @content;
+    }
+  }
+
+  @if ($screenSize == '995') {
+    @media (max-width: '995px') {
+      @content;
+    }
+  }
+
+  @if ($screenSize == '768') {
+    @media (max-width: '768px') {
+      @content;
+    }
+  }
+
+  @if ($screenSize == '600') {
+    @media (max-width: '600px') {
+      @content;
+    }
+  }
+
+  @if ($screenSize == '480') {
+    @media (max-width: '480px') {
+      @content;
+    }
+  }
+}
+
+@mixin flex($align: false, $justify: false, $direction: false) {
+  display: flex;
+
+  @if $align {
+    align-items: $align;
+  }
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $justify {
+    justify-content: $justify;
+  }
+}
+
+@mixin btn(
+  $padding: false,
+  $bg: false,
+  $bgHover: false,
+  $colorText: false,
+  $colorTextHover: false
+) {
+  @if ($padding) {
+    padding: $padding;
+  }
+
+  @if ($bg) {
+    background-color: $bg;
+  } @else {
+    background-color: $accent-color;
+  }
+
+  @if ($bgHover) {
+    &:hover {
+      background-color: $bgHover;
+    }
+  } @else {
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  @if ($colorText) {
+    color: $colorText;
+  } @else {
+    color: $primary-color;
+  }
+
+  @if ($colorTextHover) {
+    &:hover {
+      color: $colorTextHover;
+    }
+  } @else {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
