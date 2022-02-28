@@ -11,6 +11,9 @@
   background-color: var(--primary-color);
   height: 11.9rem;
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .header .container {
@@ -46,7 +49,7 @@
 /* HERO */
 .hero {
   background-color: var(--primary-color);
-  padding: 3.9rem 0 6.7rem;
+  padding: calc(11.9rem + 3.9rem) 0 6.7rem;
   position: relative;
 }
 

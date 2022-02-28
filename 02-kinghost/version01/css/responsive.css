@@ -151,6 +151,7 @@
   .header {
     height: 8rem;
   }
+
   .header .container {
     justify-content: flex-start;
   }
@@ -161,7 +162,7 @@
 
   /* HERO */
   .hero {
-    padding-top: 2rem;
+    padding-top: calc(8rem + 3rem);
   }
 
   .hero-left p {
