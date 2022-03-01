@@ -103,14 +103,6 @@
 
     .title {
       margin-bottom: 4.8rem;
-
-      h2 {
-        margin-bottom: 0.8rem;
-      }
-
-      p {
-        color: rgba(255, 255, 255, 0.7);
-      }
     }
   }
 
@@ -185,6 +177,16 @@
       width: calc((100% / 6) - 2.67rem);
 
       @include flex(center, center, $setFlexPropertyConfig: inline-flex);
+    }
+  }
+
+  .title {
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
     }
   }
 }

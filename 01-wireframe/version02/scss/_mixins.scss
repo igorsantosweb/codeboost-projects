@@ -73,10 +73,6 @@
     &:hover {
       background-color: $bgHover;
     }
-  } @else {
-    &:hover {
-      background-color: $brand-colors-pink;
-    }
   }
 
   @if ($colorText) {
@@ -88,10 +84,6 @@
   @if ($colorTextHover) {
     &:hover {
       color: $colorTextHover;
-    }
-  } @else {
-    &:hover {
-      color: $white;
     }
   }
 }
