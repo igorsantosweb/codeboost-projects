@@ -121,9 +121,9 @@ h3 {
 }
 
 .header-nav ul {
+  margin-right: 3.2rem;
   align-items: center;
   display: flex;
-  margin-right: 3.2rem;
 }
 
 .header-nav ul li + li {
@@ -141,10 +141,10 @@ h3 {
 }
 
 .hero .container {
-  align-items: center;
-  display: flex;
   gap: 3.2rem;
+  align-items: center;
   justify-content: space-between;
+  display: flex;
 }
 
 .hero-left {
@@ -166,22 +166,10 @@ h3 {
   padding: 2rem 3.567rem;
 }
 
-.hero-right {
-  min-width: 48rem;
-}
-
 /* FEATURE */
 .feature {
-  background-color: var(--gray-colors-100);
+  background-color: #050110;
   padding: 10.4rem 0 12rem;
-}
-
-.feature .title h2 {
-  margin-bottom: 0.8rem;
-}
-
-.feature .title p {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .feature-main {
@@ -190,40 +178,48 @@ h3 {
   padding-bottom: 12.2rem;
 }
 
-.feature-main .title {
-  margin-bottom: 4.8rem;
-}
-
 .feature-main .title h2,
 .feature-main .title p {
   text-align: center;
 }
 
+.feature-main .title {
+  margin-bottom: 4.8rem;
+}
+
+.feature-main .title h2 {
+  margin-bottom: 0.8rem;
+}
+
+.feature-main .title p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .feature-cards {
-  display: flex;
   gap: 3.2rem;
+  display: flex;
 }
 
 .feature-cards-item {
-  align-items: center;
-  background-color: var(--gray-colors-200);
-  display: flex;
-  flex-direction: column;
+  background-color: #1c1d1f;
   height: 38.2rem;
   padding: 6.4rem 2rem 2rem;
   width: calc(100% / 3);
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 
 .feature-cards-item.white {
-  background-color: var(--white);
+  background-color: #fff;
 }
 
 .feature-cards-item.white h3 {
-  color: var(--gray-colors-100);
+  color: #050110;
 }
 
 .feature-cards-item.white p {
-  color: var(--gray-colors-300);
+  color: #393c40;
 }
 
 .feature-cards-item-icon {
@@ -248,11 +244,11 @@ h3 {
 }
 
 .feature-area-top {
-  align-items: center;
-  display: flex;
   grid-gap: 3.2rem;
-  justify-content: space-between;
   margin-bottom: 5.6rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 }
 
 .feature-area-top .title {
@@ -260,20 +256,20 @@ h3 {
 }
 
 .feature-area-thumb {
-  display: flex;
   gap: 3.2rem;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .feature-area-thumb-item {
-  align-items: center;
-  background-color: var(--gray-colors-200);
-  display: inline-flex;
+  background-color: #1c1d1f;
   height: 11.2rem;
-  justify-content: center;
   max-width: 100%;
   width: calc((100% / 6) - 2.67rem);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 /* NEWSLETTER */

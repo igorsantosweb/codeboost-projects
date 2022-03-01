@@ -28,6 +28,7 @@
   $align: false,
   $justify: false,
   $direction: false,
+  $wrap: false,
   $setFlexPropertyConfig: false
 ) {
   @if $align {
@@ -40,6 +41,10 @@
 
   @if $direction {
     flex-direction: $direction;
+  }
+
+  @if $wrap {
+    flex-wrap: $wrap;
   }
 
   @if ($setFlexPropertyConfig) {
