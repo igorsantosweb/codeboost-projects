@@ -173,4 +173,135 @@
       @include flex(center, space-between, $setFlexPropertyConfig: true);
     }
   }
+
+  @include responsive(991) {
+    padding: 7.4rem 0 5rem;
+
+    &-top {
+      flex-direction: column;
+
+      h2,
+      p {
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 1.8rem;
+      }
+    }
+
+    &-main {
+      ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      li {
+        &:first-child {
+          width: 100%;
+        }
+
+        &:not(:first-child) {
+          width: calc((100% / 3) - 2.15rem);
+        }
+      }
+
+      .box-info {
+        &.edit {
+          max-width: 100%;
+          padding: 2rem;
+
+          @include flex(center, center, column, $setFlexPropertyConfig: true);
+
+          strong,
+          p {
+            text-align: center;
+          }
+        }
+
+        &-text p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @include responsive(768) {
+    &-main {
+      li:not(:first-child),
+      li:first-child {
+        width: calc((100% / 2) - 1.6rem);
+      }
+
+      .box-info {
+        max-width: 100%;
+        min-height: 26rem;
+        padding: 2rem 0;
+
+        &.edit {
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(600) {
+    li:not(:first-child),
+    li:first-child {
+      width: 100%;
+    }
+  }
+
+  @include responsive(480) {
+    &-top {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 302px;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    &-main {
+      ul {
+        grid-gap: 5.4rem;
+      }
+
+      .box-info,
+      .box-info.edit {
+        column-gap: 2.8rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        min-height: auto;
+      }
+
+      .box-info {
+        &-icon {
+          grid-row: 2 span;
+        }
+
+        &-subject {
+          strong {
+            margin-bottom: 1.4rem;
+            margin-top: 0;
+            text-align: left !important;
+          }
+        }
+
+        &-text {
+          grid-column: 2;
+        }
+      }
+    }
+  }
 }
