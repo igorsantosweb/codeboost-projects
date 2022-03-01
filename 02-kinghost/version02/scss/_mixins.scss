@@ -1,38 +1,41 @@
 @mixin responsive($screenSize) {
-  @if ($screenSize == '1200') {
+  @if ($screenSize == 1200) {
     @media (max-width: '1200px') {
       @content;
     }
   }
 
-  @if ($screenSize == '995') {
+  @if ($screenSize == 995) {
     @media (max-width: '995px') {
       @content;
     }
   }
 
-  @if ($screenSize == '768') {
+  @if ($screenSize == 768) {
     @media (max-width: '768px') {
       @content;
     }
   }
 
-  @if ($screenSize == '600') {
+  @if ($screenSize == 600) {
     @media (max-width: '600px') {
       @content;
     }
   }
 
-  @if ($screenSize == '480') {
+  @if ($screenSize == 480) {
     @media (max-width: '480px') {
       @content;
     }
   }
 }
 
-@mixin flex($align: false, $justify: false, $direction: false) {
-  display: flex;
-
+@mixin flex(
+  $align: false,
+  $justify: false,
+  $direction: false,
+  $setFlexPropertyConfig: false
+) {
   @if $align {
     align-items: $align;
   }
@@ -43,6 +46,10 @@
 
   @if $justify {
     justify-content: $justify;
+  }
+
+  @if ($setFlexPropertyConfig) {
+    display: flex;
   }
 }
 
