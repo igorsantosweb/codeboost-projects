@@ -11,6 +11,12 @@
     }
   }
 
+  @if ($screenSize == 768) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
   @if ($screenSize == 600) {
     @media (max-width: 600px) {
       @content;
