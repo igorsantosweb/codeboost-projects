@@ -51,7 +51,7 @@ button {
     border-radius: 1.2rem;
     height: 6.4rem;
     width: 6.4rem;
-    @include flex(center, center);
+    @include flex(center, center, $setFlexPropertyConfig: true);
   }
 
   &-subject strong {
@@ -68,5 +68,69 @@ button {
     line-height: 165%;
     color: #5e5570;
     max-width: 24rem;
+  }
+}
+
+.header {
+  background-color: $primary-color;
+  height: 11.9rem;
+
+  .container {
+    height: 100%;
+
+    @include flex(center, space-between, $setFlexPropertyConfig: true);
+
+    @include responsive(768) {
+      @include flex($justify: center);
+    }
+
+    @include responsive(480) {
+      @include flex($justify: flex-start);
+    }
+  }
+
+  &-nav {
+    ul,
+    a {
+      @include flex(center, $setFlexPropertyConfig: true);
+    }
+
+    li {
+      &:last-child span {
+        font-weight: bold;
+      }
+
+      & + li {
+        margin-left: 5.6rem;
+      }
+    }
+
+    a {
+      color: $gray-light;
+      line-height: 1.9rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    img {
+      margin-right: 1.4rem;
+    }
+  }
+
+  @include responsive(480) {
+    @include flex($justify: flex-start);
+
+    &-logo img {
+      max-width: 16.4rem;
+    }
+  }
+
+  @include responsive(768) {
+    &-nav {
+      display: none;
+    }
   }
 }
