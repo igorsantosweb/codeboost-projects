@@ -6,7 +6,7 @@
 }
 
 h1 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: $first-font;
   font-weight: bold;
   font-size: 4.8rem;
   line-height: 120%;
@@ -15,7 +15,7 @@ h1 {
 
 h2 {
   color: $title-session-color;
-  font-family: 'PT Sans', sans-serif;
+  font-family: $first-font;
   font-size: 3.2rem;
   font-weight: bold;
   line-height: 130%;
