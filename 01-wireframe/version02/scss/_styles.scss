@@ -1,3 +1,9 @@
+html {
+  @include responsive(480) {
+    font-size: 55%;
+  }
+}
+
 /* CONTAINER */
 .container {
   margin: 0 auto;
@@ -54,6 +60,141 @@
       }
     }
   }
+
+  @include responsive(1200) {
+    &-nav {
+      ul {
+        margin-right: 1.2rem;
+
+        li + li {
+          margin-left: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(991) {
+    .logo {
+      z-index: 999;
+    }
+
+    &-nav {
+      animation: moveMenuMobile forwards 0.3s;
+      background-color: #e6ebf3;
+      box-shadow: 1px 1px 3px #656565;
+      display: none;
+      padding-top: 8rem;
+      position: absolute;
+      top: 0;
+
+      &.active {
+        display: block;
+      }
+
+      @keyframes moveMenuMobile {
+        from {
+          opacity: 0;
+          left: -150%;
+        }
+        to {
+          opacity: 1;
+          left: 0%;
+        }
+      }
+
+      ul li,
+      ul a {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      ul {
+        margin-right: 0;
+        width: 208px;
+
+        @include flex(center, $direction: column);
+
+        li + li {
+          margin-left: 0;
+        }
+
+        a {
+          border-bottom: 1px solid #ccc;
+          padding: 2rem 1.5rem;
+        }
+      }
+
+      .btn {
+        padding: 2rem 1.5rem;
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    &-btn-mobile {
+      @include flex(center, $setFlexPropertyConfig: true);
+
+      &.active {
+        div {
+          span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 0.5rem;
+          }
+
+          span:nth-child(2) {
+            opacity: 0;
+            display: none;
+          }
+
+          span:nth-child(3) {
+            top: 0.5rem;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      div {
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        position: relative;
+        width: 1.6rem;
+
+        @include flex($direction: column, $setFlexPropertyConfig: true);
+
+        span {
+          background-color: $gray-colors-400;
+          border-radius: 10px;
+          height: 0.3rem;
+          display: inline-block;
+          position: absolute;
+          transition: 0.2s;
+          width: 1.6rem;
+
+          &:nth-child(2) {
+            top: 0.6rem;
+          }
+
+          &:nth-child(3) {
+            top: 1.2rem;
+          }
+        }
+      }
+
+      span.text {
+        font-family: $second-font;
+      }
+    }
+  }
+
+  @include responsive(480) {
+    .logo {
+      max-width: 130px;
+    }
+
+    &-nav ul {
+      width: 160px;
+    }
+  }
 }
 
 /* HERO */
@@ -82,6 +223,46 @@
 
     .btn {
       padding: 2rem 3.567rem;
+    }
+  }
+
+  @include responsive(991) {
+    .container {
+      @include flex($direction: column);
+    }
+
+    &-left {
+      h1,
+      p {
+        text-align: center;
+      }
+
+      p {
+        max-width: inherit;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &-right {
+      min-width: auto;
+    }
+  }
+
+  @include responsive(480) {
+    padding: 12.8rem 0 4rem;
+
+    &-left {
+      h1 {
+        font-size: 4.2rem;
+      }
+
+      p {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
@@ -189,6 +370,93 @@
       color: rgba(255, 255, 255, 0.7);
     }
   }
+
+  @include responsive(1200) {
+    &-area-thumb {
+      &-item {
+        width: calc((100% / 5) - 2.56rem);
+      }
+    }
+  }
+
+  @include responsive(991) {
+    &-cards {
+      @include flex($justify: center, $wrap: wrap);
+
+      &-item {
+        width: calc((100% / 2) - 32px);
+      }
+    }
+    &-area-thumb {
+      grid-gap: 1.6rem;
+
+      &-item {
+        width: calc((100% / 4) - 1.2rem);
+      }
+    }
+  }
+
+  @include responsive(768) {
+    &-cards {
+      &-item {
+        max-width: 480px;
+        width: 100%;
+      }
+    }
+
+    &-area {
+      &-top {
+        gap: 0;
+
+        @include flex($direction: column);
+
+        h2,
+        p {
+          text-align: center;
+        }
+
+        .title {
+          margin-bottom: 3rem;
+        }
+      }
+
+      &-thumb-item {
+        height: 15rem;
+        width: calc((100% / 3) - 1.07rem);
+      }
+    }
+  }
+
+  @include responsive(600) {
+    &-area {
+      &-thumb-item {
+        width: calc((100% / 2) - 0.8rem);
+      }
+    }
+  }
+
+  @include responsive(480) {
+    /* FEATURE */
+    .feature {
+      padding: 4rem 0;
+
+      &-main {
+        margin-bottom: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      &-cards {
+        &-item {
+          height: auto;
+          padding: 2rem 2rem 2.5rem;
+        }
+
+        &-icon {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 }
 
 /* NEWSLETTER */
@@ -202,8 +470,9 @@
   }
 
   &-content {
-    flex-direction: column;
     max-width: 69.4rem;
+
+    @include flex($direction: column);
 
     div {
       margin-bottom: 4rem;
@@ -224,6 +493,16 @@
 
     button {
       padding: 2rem 4rem;
+    }
+  }
+
+  @include responsive(480) {
+    .newsletter {
+      padding: 4rem 0;
+
+      &-content div {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
@@ -322,6 +601,55 @@
         color: rgba(255, 255, 255, 0.7);
         font-size: 1.4rem;
         margin-right: 0.8rem;
+      }
+    }
+  }
+
+  @include responsive(768) {
+    .footer {
+      &-main {
+        @include flex(center, $direction: column, $setFlexPropertyConfig: true);
+
+        &-left a img,
+        &-left p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  @include responsive(600) {
+    .footer {
+      &-bottom {
+        gap: 0.8rem;
+
+        @include flex($direction: column);
+      }
+    }
+  }
+
+  @include responsive(480) {
+    .footer,
+    .footer-main {
+      padding: 4rem 0;
+    }
+
+    .footer {
+      &-main {
+        &-right {
+          @include flex(center, $direction: column);
+
+          strong,
+          li a {
+            text-align: center;
+          }
+
+          .networks li a {
+            @include flex($justify: center);
+          }
+        }
       }
     }
   }
