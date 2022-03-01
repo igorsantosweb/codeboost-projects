@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  color: #5e5570;
+  color: #453f51;
   font-family: 'PT Sans', sans-serif;
   font-size: 3.2rem;
   font-weight: bold;
@@ -107,6 +107,7 @@ button {
   line-height: 165%;
   color: #5e5570;
   max-width: 24rem;
+  font-weight: 400;
 }
 
 .header {
@@ -302,4 +303,48 @@ button {
     font-size: 3.2rem;
     margin-bottom: 2.4rem;
   }
+}
+
+.resources {
+  padding: 14.9rem 0 9.9rem;
+}
+
+.resources-top {
+  margin-bottom: 5.3rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.resources-top h2 {
+  max-width: 48rem;
+}
+
+.resources-top p {
+  color: #5e5570;
+  font-weight: 400;
+}
+
+.resources-top p span {
+  font-weight: bold;
+}
+
+.resources-main ul {
+  position: relative;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.resources-main ul::after {
+  content: '';
+  background-color: rgba(95, 60, 161, 0.1);
+  bottom: 0;
+  border-radius: 1.2rem;
+  display: block;
+  height: 4px;
+  position: absolute;
+  right: 0;
+  width: calc(76% - 3.2rem);
 }

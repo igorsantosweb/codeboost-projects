@@ -130,3 +130,47 @@
     }
   }
 }
+
+.resources {
+  padding: 14.9rem 0 9.9rem;
+
+  &-top {
+    margin-bottom: 5.3rem;
+
+    @include flex(center, space-between, $setFlexPropertyConfig: true);
+
+    h2 {
+      max-width: 48rem;
+    }
+
+    p {
+      color: $complementary-color;
+      font-weight: 400;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-main {
+    ul {
+      position: relative;
+      gap: 3.2rem;
+
+      &::after {
+        content: '';
+        background-color: rgba(95, 60, 161, 0.1);
+        bottom: 0;
+        border-radius: 1.2rem;
+        display: block;
+        height: 4px;
+        position: absolute;
+        right: 0;
+        width: calc(76% - 3.2rem);
+      }
+
+      @include flex(center, space-between, $setFlexPropertyConfig: true);
+    }
+  }
+}

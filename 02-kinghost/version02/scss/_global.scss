@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-  color: $complementary-color;
+  color: $title-session-color;
   font-family: 'PT Sans', sans-serif;
   font-size: 3.2rem;
   font-weight: bold;
@@ -68,6 +68,7 @@ button {
     line-height: 165%;
     color: #5e5570;
     max-width: 24rem;
+    font-weight: 400;
   }
 }
 
