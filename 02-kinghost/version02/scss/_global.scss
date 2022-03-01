@@ -75,6 +75,11 @@ button {
 .header {
   background-color: $primary-color;
   height: 11.9rem;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 
   .container {
     height: 100%;
@@ -122,6 +127,8 @@ button {
   }
 
   @include responsive(480) {
+    height: 8rem;
+
     @include flex($justify: flex-start);
 
     &-logo img {
