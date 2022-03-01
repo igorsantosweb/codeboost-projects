@@ -156,7 +156,7 @@ h3 {
 }
 
 .hero-left p {
-  color: var(--gray-colors-300);
+  color: #393c40;
   font-size: 1.8rem;
   max-width: 48.8rem;
   margin-bottom: 5.6rem;
@@ -274,15 +274,14 @@ h3 {
 
 /* NEWSLETTER */
 .newsletter {
-  background-color: var(--gray-colors-200);
+  background-color: #1c1d1f;
   padding: 15.2rem 0;
 }
 
-.newsletter .container,
-.newsletter-content {
+.newsletter .container, .newsletter-content {
   align-items: center;
-  display: flex;
   justify-content: center;
+  display: flex;
 }
 
 .newsletter-content {
@@ -313,7 +312,7 @@ h3 {
 
 /* FOOTER */
 .footer {
-  background-color: var(--gray-colors-100);
+  background-color: #050110;
   padding: 8.8rem 0 4rem;
 }
 
@@ -326,11 +325,11 @@ h3 {
 
 .footer-main {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
   gap: 3.2rem;
-  justify-content: space-between;
   padding-bottom: 7.2rem;
   margin-bottom: 4rem;
+  justify-content: space-between;
+  display: flex;
 }
 
 .footer-main-left {
@@ -347,20 +346,20 @@ h3 {
 }
 
 .footer-main-right {
-  display: flex;
   gap: 3.2rem;
-  justify-content: space-between;
   max-width: 77.7rem;
   width: 100%;
+  justify-content: space-between;
+  display: flex;
 }
 
 .footer-main-right strong,
 .footer-main-right a {
-  font-family: var(--second-font);
+  font-family: "Sora", sans-serif;
 }
 
 .footer-main-right strong {
-  color: var(--white);
+  color: #fff;
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
@@ -381,7 +380,7 @@ h3 {
 
 .footer-main-right li a:hover,
 .footer-main-right li a:hover span {
-  color: var(--white);
+  color: #fff;
 }
 
 .footer-main-right .networks li a {
@@ -395,8 +394,8 @@ h3 {
 
 .footer-bottom {
   align-items: center;
-  display: flex;
   justify-content: space-between;
+  display: flex;
 }
 
 .footer-bottom div {
