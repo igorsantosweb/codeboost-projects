@@ -40,7 +40,7 @@
 
   <main class="hero">
     <div class="container">
-      <div class="hero-left">
+      <div class="hero-left" data-animation-type="revelation-fadeRight">
         <h1>Ferramenta de e-mail marketing perfeita para sua empresa!</h1>
         <p>Aproveite o potencial do e-mail marketing para ganhar vendas e fortalecer seu relacionamento com clientes.</p>
         <button>Teste gratuitamente</button>
@@ -53,15 +53,15 @@
         </a>
       </div>
 
-      <div class="hero-right">
+      <div class="hero-right" data-animation-type="zoomIn">
         <img src="./img/ilustra.svg" alt="Icone de um dashboard">
       </div>
     </div>
   </main>
 
-  <section class="resources" id="resources">
+  <section class="resources" id="resources" data-animation="scroll">
     <div class="container">
-      <div class="resources-top">
+      <div class="resources-top" data-animation-type="revelation-fadeUp">
         <h2>Conheça os recursos da ferramenta de e-mail marketing KingHost</h2>
         <p>Mais de <span>5.000 empresas</span> que utilizam ✌️</p>
       </div>
@@ -69,7 +69,7 @@
       <div class="resources-main">
         <ul>
           <li>
-            <div class="box-info edit">
+            <div class="box-info edit" data-animation-type="revelation-fadeRight">
               <div class="box-info-icon">
                 <img src="./img/icone-alcance.svg" alt="">
               </div>
@@ -82,7 +82,7 @@
             </div>
           </li>
           <li>
-            <div class="box-info">
+            <div class="box-info" data-animation-type="revelation-fadeLeft">
               <div class="box-info-icon">
                 <img src="./img/icone-gaste-menos.svg" alt="">
               </div>
@@ -95,7 +95,7 @@
             </div>
           </li>
           <li>
-            <div class="box-info">
+            <div class="box-info" data-animation-type="revelation-fadeLeft">
               <div class="box-info-icon">
                 <img src="./img/icone-autonomia.svg" alt="">
               </div>
@@ -108,7 +108,7 @@
             </div>
           </li>
           <li>
-            <div class="box-info">
+            <div class="box-info" data-animation-type="revelation-fadeLeft">
               <div class="box-info-icon">
                 <img src="./img/icon-templates.svg" alt="">
               </div>
@@ -124,6 +124,8 @@
       </div>
     </div>
   </section>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
