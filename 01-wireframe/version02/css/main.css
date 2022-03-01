@@ -88,18 +88,32 @@ h3 {
 
 /* HEADER */
 .header {
-  background-color: var(--gray-colors-800);
-  display: flex;
+  background-color: #f7f8fa;
   height: 8.8rem;
   position: fixed;
   width: 100%;
   z-index: 999;
+  display: flex;
 }
 
 .header .container {
   align-items: center;
-  display: flex;
   justify-content: space-between;
+  display: flex;
+}
+
+.header-nav ul a, .header-btn-mobile {
+  background-color: #e6ebf2;
+  color: #5c6066;
+  font-size: 1.5rem;
+  letter-spacing: -0.01rem;
+  line-height: 100%;
+  padding: 1.25rem 2.4rem;
+  transition: 0.3s;
+}
+
+.header-btn-mobile {
+  display: none;
 }
 
 .header-nav {
@@ -116,24 +130,9 @@ h3 {
   margin-left: 3.2rem;
 }
 
-.header-nav ul a,
-.header-btn-mobile {
-  background-color: #e6ebf2;
-  color: var(--gray-colors-400);
-  font-size: 1.5rem;
-  letter-spacing: -0.01rem;
-  line-height: 100%;
-  padding: 1.25rem 2.4rem;
-  transition: 0.3s;
-}
-
 .header-nav ul a:hover {
   background: #acb4bf;
-  color: var(--white);
-}
-
-.header-btn-mobile {
-  display: none;
+  color: #fff;
 }
 
 /* HERO */
