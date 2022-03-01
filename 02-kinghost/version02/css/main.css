@@ -22,15 +22,13 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-p {
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 150%;
+button {
+  cursor: pointer;
 }
 
 strong {
@@ -175,5 +173,133 @@ button {
 @media (max-width: 768px) {
   .header-nav {
     display: none;
+  }
+}
+
+.hero {
+  background-color: #5f3ca1;
+  padding: 3.9rem 0 6.7rem;
+}
+
+.hero .container {
+  gap: 3.2rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.hero-left {
+  max-width: 48.8rem;
+}
+
+.hero-left h1 {
+  margin-bottom: 1.6rem;
+}
+
+.hero-left p {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 150%;
+  margin-bottom: 3.2rem;
+}
+
+.hero-left button {
+  margin-bottom: 8.6rem;
+  background-color: #ffbf00;
+  color: #5f3ca1;
+}
+
+.hero-left button:hover {
+  background-color: #fff;
+}
+
+.hero-left button:hover {
+  color: #5f3ca1;
+}
+
+.hero-left a {
+  max-width: max-content;
+  align-items: center;
+  display: flex;
+}
+
+.hero-left a:hover span {
+  color: #ffbf00;
+}
+
+.hero-left a div {
+  background-color: #7b5aba;
+  border-radius: 0.6rem;
+  height: 4.2rem;
+  margin-right: 1.6rem;
+  width: 4.2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hero-left a span {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  transition: 0.3s;
+}
+
+.hero-right {
+  position: relative;
+  top: calc(6.7rem + 1.3rem);
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding-bottom: 0;
+  }
+  .hero .container {
+    flex-direction: column;
+  }
+  .hero-left {
+    max-width: 100%;
+  }
+  .hero-left h1,
+  .hero-left p {
+    text-align: center;
+  }
+  .hero-left button {
+    display: block;
+    margin-bottom: 4.1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-left a {
+    margin: 0 auto;
+  }
+  .hero-right {
+    top: 1.3rem;
+    left: -4%;
+  }
+  .hero-right img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    gap: 5.5rem;
+  }
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+  .hero-left p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 1rem;
+  }
+  .hero-left h1 {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
   }
 }

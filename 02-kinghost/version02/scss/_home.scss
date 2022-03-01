@@ -1,0 +1,132 @@
+.hero {
+  background-color: $primary-color;
+  padding: 3.9rem 0 6.7rem;
+
+  .container {
+    gap: 3.2rem;
+
+    @include flex($justify: space-between, $setFlexPropertyConfig: true);
+  }
+
+  &-left {
+    max-width: 48.8rem;
+
+    h1 {
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      color: $white;
+      font-size: 1.8rem;
+      line-height: 150%;
+      margin-bottom: 3.2rem;
+    }
+
+    button {
+      margin-bottom: 8.6rem;
+
+      @include btn(
+        $bg: $accent-color,
+        $bgHover: $white,
+        $colorText: $primary-color
+      );
+    }
+
+    a {
+      max-width: max-content;
+
+      &:hover span {
+        color: $accent-color;
+      }
+
+      @include flex(center, $setFlexPropertyConfig: true);
+
+      div {
+        background-color: $primary-color-light;
+        border-radius: 0.6rem;
+        height: 4.2rem;
+        margin-right: 1.6rem;
+        width: 4.2rem;
+
+        @include flex(center, center, $setFlexPropertyConfig: true);
+      }
+
+      span {
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.9rem;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &-right {
+    position: relative;
+    top: calc(6.7rem + 1.3rem);
+  }
+
+  @include responsive(991) {
+    padding-bottom: 0;
+
+    .container {
+      flex-direction: column;
+    }
+
+    &-left {
+      max-width: 100%;
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin-bottom: 4.1rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      a {
+        margin: 0 auto;
+      }
+    }
+
+    &-right {
+      top: 1.3rem;
+      left: -4%;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include responsive(768) {
+    .container {
+      gap: 5.5rem;
+    }
+
+    &-left {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  @include responsive(480) {
+    padding-top: 1rem;
+
+    &-left {
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}

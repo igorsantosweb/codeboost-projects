@@ -22,15 +22,13 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-p {
-  color: $white;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 150%;
+button {
+  cursor: pointer;
 }
 
 strong {
