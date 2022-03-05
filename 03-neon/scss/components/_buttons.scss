@@ -1,0 +1,13 @@
+@import '../config/mixins';
+
+button {
+  @include btn('primary');
+
+  &.outline {
+    @include btn('outline');
+  }
+
+  &.outline-reverse {
+    @include btn('outline-reverse');
+  }
+}

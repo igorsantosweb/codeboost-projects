@@ -1,0 +1,110 @@
+@import '../config/variables';
+
+@mixin flex(
+  $align: false,
+  $justify: false,
+  $direction: false,
+  $wrap: false,
+  $setDisplayFlexProperty: false
+) {
+  @if ($align) {
+    align-items: $align;
+  }
+
+  @if ($setDisplayFlexProperty) {
+    display: flex;
+  }
+
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+
+  @if ($wrap) {
+    flex-wrap: wrap;
+  }
+
+  @if ($justify) {
+    justify-content: $justify;
+  }
+}
+
+@mixin responsive($deviceWidth) {
+  @if ($deviceWidth == 1200) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($deviceWidth == 991) {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if ($deviceWidth == 768) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($deviceWidth == 600) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($deviceWidth == 480) {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+@mixin btn($typeStyle: 'primary', $padding: false) {
+  @if ($typeStyle == 'primary') {
+    // set for all <button> tag
+    border-radius: 12.2rem;
+    display: inline-block;
+    // font-family: ;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  @if ($typeStyle == 'primary') {
+    background-color: $accent-color;
+    color: $accent-color-dark;
+    padding: 1.6rem 2.6rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $accent-color-light;
+    }
+  }
+
+  @if ($typeStyle == 'outline') {
+    background-color: transparent;
+    border: 1px solid $primary-color-normal;
+    color: $primary-color-normal;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $primary-color-normal;
+      color: $white;
+    }
+  }
+
+  @if ($typeStyle == 'outline-reverse') {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-color-light;
+    }
+  }
+
+  @if not($padding) {
+    padding: $padding;
+  }
+}
