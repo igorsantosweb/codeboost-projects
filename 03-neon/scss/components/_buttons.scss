@@ -7,7 +7,7 @@ button {
     @include btn('outline');
   }
 
-  &.outline-reverse {
-    @include btn('outline-reverse');
+  &.outline-transparent {
+    @include btn('outline-transparent');
   }
 }
