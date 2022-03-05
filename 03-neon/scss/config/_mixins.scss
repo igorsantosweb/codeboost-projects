@@ -61,8 +61,8 @@
 }
 
 @mixin btn($typeStyle: 'primary', $padding: false) {
+  // set for all <button> tag
   @if ($typeStyle == 'primary') {
-    // set for all <button> tag
     border-radius: 12.2rem;
     display: inline-block;
     // font-family: ;
@@ -102,9 +102,5 @@
       background-color: $white;
       color: $primary-color-light;
     }
-  }
-
-  @if not($padding) {
-    padding: $padding;
   }
 }
