@@ -38,6 +38,13 @@ button {
   cursor: pointer;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: calc(121.6rem + 3rem);
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
 button {
   border-radius: 12.2rem;
   display: inline-block;
