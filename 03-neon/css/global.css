@@ -5,6 +5,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
 }
 
 html,
@@ -17,11 +19,18 @@ html {
 }
 
 p {
+  color: #5f5c6b;
   font-size: 1.8rem;
+  line-height: 150%;
 }
 
 a {
   text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffc800;
 }
 
 ul {
