@@ -5,7 +5,7 @@
   $justify: false,
   $direction: false,
   $wrap: false,
-  $setDisplayFlexProperty: false
+  $setDisplayFlexProperty: true
 ) {
   @if ($align) {
     align-items: $align;

@@ -131,3 +131,28 @@ h4 {
   font-size: 2rem;
   line-height: 112%;
 }
+
+.testimonial-item {
+  background-color: rgba(241, 240, 245, 0.55);
+  border-radius: 0.8rem;
+  max-width: 38.4rem;
+  height: 20.9rem;
+  padding: 3.7rem 3.2rem 2.3rem;
+  width: 100%;
+}
+
+.testimonial-item-user {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.1rem;
+}
+
+.testimonial-item-user strong {
+  color: #4e4b59;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 112%;
+}
