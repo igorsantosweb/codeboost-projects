@@ -27,11 +27,12 @@ p {
 }
 
 a {
+  font-family: $second-font;
   text-decoration: none;
   transition: 0.3s;
 
   &:hover {
-    color: $accent-color;
+    color: $accent-color !important;
   }
 }
 
@@ -47,4 +48,5 @@ img {
 button {
   border: none;
   cursor: pointer;
+  font-family: $second-font;
 }

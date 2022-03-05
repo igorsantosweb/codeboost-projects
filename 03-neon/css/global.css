@@ -25,12 +25,13 @@ p {
 }
 
 a {
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: #ffc800;
+  color: #ffc800 !important;
 }
 
 ul {
@@ -45,6 +46,7 @@ img {
 button {
   border: none;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -130,6 +132,45 @@ h3 {
 h4 {
   font-size: 2rem;
   line-height: 112%;
+}
+
+.header {
+  background-color: #0073ce;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  height: 8.8rem;
+}
+
+.header .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav,
+.header nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav ul {
+  margin-right: 5.9rem;
+}
+
+.header nav ul li:not(:first-child) {
+  margin-left: 4.8rem;
+}
+
+.header nav ul a {
+  font-weight: 500;
+  color: #fff;
+  line-height: 125%;
+}
+
+.header nav button {
+  line-height: 125%;
+  padding: 1rem 1.8rem;
 }
 
 .testimonial-item {
