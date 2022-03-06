@@ -291,3 +291,47 @@
 .features-right-account-box-btns button:not(:first-child) {
   margin-left: 1.6rem;
 }
+
+.testimonial {
+  padding-bottom: 13.4rem;
+  padding-top: 13.4rem;
+}
+
+.testimonial-top {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.testimonial-top h2 span {
+  color: #c6c5ce;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: -1px;
+  line-height: 112%;
+  margin-bottom: 1.4rem;
+}
+
+.testimonial-top .swiper-pagination {
+  bottom: 1.5rem;
+  left: unset;
+  max-width: max-content;
+  right: 0;
+}
+
+.testimonial-top .swiper-pagination-bullet {
+  background-color: #ffdc5c;
+  height: 7px;
+  transition: 0.3s;
+}
+
+.testimonial-top .swiper-pagination-bullet-active {
+  border-radius: 12px;
+  background-color: #ffc800;
+  width: 17.23px;
+}
+
+.testimonial-main {
+  overflow: hidden;
+}
