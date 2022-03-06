@@ -106,3 +106,79 @@
   top: 2.8rem;
   z-index: 1;
 }
+
+.features {
+  padding-top: 12.9rem;
+}
+
+.features .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-left {
+  max-width: 27.7rem;
+  width: 100%;
+}
+
+.features-left-mockup {
+  margin-bottom: 13rem;
+  position: relative;
+}
+
+.features-left-mockup img:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
+
+.features-left-mockup img:nth-child(2) {
+  left: -21.4rem;
+  max-width: unset;
+  position: absolute;
+  top: 8.7rem;
+}
+
+.features-left-app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-left-app p {
+  color: #5f5c6b;
+  font-size: 1.6rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.features-left-app-icon {
+  margin-bottom: 3.6rem;
+  position: relative;
+}
+
+.features-left-app-icon::before {
+  content: '';
+  display: block;
+  background: url(../../img/points.svg) no-repeat;
+  height: 83px;
+  left: 50%;
+  margin-top: -21px;
+  position: absolute;
+  top: -83px;
+  transform: translateX(-50%);
+  width: 5px;
+}
+
+.features-left-app-download {
+  margin-top: 2.6rem;
+}
+
+.features-left-app-download a:not(:first-child) {
+  display: block;
+  margin-top: 1.3rem;
+}
+
+.features-right {
+  max-width: 80rem;
+  width: 100%;
+}

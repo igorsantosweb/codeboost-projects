@@ -108,3 +108,78 @@
     }
   }
 }
+
+.features {
+  padding-top: 12.9rem;
+
+  .container {
+    @include flex($justify: space-between);
+  }
+
+  &-left {
+    max-width: 27.7rem;
+    width: 100%;
+
+    &-mockup {
+      margin-bottom: 13rem;
+      position: relative;
+
+      img {
+        &:nth-child(1) {
+          position: relative;
+          z-index: 1;
+        }
+
+        &:nth-child(2) {
+          left: -21.4rem;
+          max-width: unset;
+          position: absolute;
+          top: 8.7rem;
+        }
+      }
+    }
+
+    &-app {
+      @include flex($direction: column, $align: center);
+
+      p {
+        color: $support-color-400;
+        font-size: 1.6rem;
+        text-align: center;
+        opacity: 0.8;
+      }
+
+      &-icon {
+        margin-bottom: 3.6rem;
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          background: url(../../img/points.svg) no-repeat;
+          height: 83px;
+          left: 50%;
+          margin-top: -21px;
+          position: absolute;
+          top: -83px;
+          transform: translateX(-50%);
+          width: 5px;
+        }
+      }
+
+      &-download {
+        margin-top: 2.6rem;
+
+        a:not(:first-child) {
+          display: block;
+          margin-top: 1.3rem;
+        }
+      }
+    }
+  }
+
+  &-right {
+    max-width: 80rem;
+    width: 100%;
+  }
+}
