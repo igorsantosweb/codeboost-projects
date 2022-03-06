@@ -203,3 +203,129 @@ h4 {
   letter-spacing: -1px;
   line-height: 112%;
 }
+
+.footer {
+  background-color: #0073ce;
+}
+
+.footer-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px rgba(73, 197, 253, 0.2) solid;
+  padding: 4.9rem 0;
+}
+
+.footer-top-network,
+.footer-top-network ul {
+  align-items: center;
+  display: flex;
+}
+
+.footer-top-network span {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 125%;
+  margin-right: 3rem;
+  opacity: 0.7;
+}
+
+.footer-top-network ul li:not(:first-child) {
+  margin-left: 3rem;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px rgba(73, 197, 253, 0.2) solid;
+  column-gap: 3.2rem;
+  padding: 5.7rem 0 6.2rem;
+}
+
+.footer-main-left {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 3.2rem;
+  max-width: 86rem;
+  width: 100%;
+}
+
+.footer-main-left-item strong {
+  color: #fff;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 2.5rem;
+}
+
+.footer-main-left-item li:not(:first-child) {
+  margin-top: 2.9rem;
+}
+
+.footer-main-left-item li a {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7rem;
+  opacity: 0.7;
+}
+
+.footer-main-left-item li a:hover {
+  opacity: 1;
+}
+
+.footer-main-right {
+  max-width: 28rem;
+  width: 100%;
+}
+
+.footer-main-right-info {
+  align-items: center;
+  display: flex;
+  background-color: rgba(0, 165, 240, 0.23);
+  border-radius: 6px;
+  padding: 1.7rem 1.5rem 1.7rem 2.5rem;
+}
+
+.footer-main-right-info img {
+  margin-right: 2.4rem;
+}
+
+.footer-main-right-info div strong {
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.footer-main-right-info div span {
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: #fff;
+}
+
+.footer-main-right-info + .footer-main-right-info {
+  margin-top: 2.4rem;
+}
+
+.footer-bottom {
+  display: flex;
+  border-bottom: 4px #ffc800 solid;
+  padding: 3.9rem 0 3.4rem;
+}
+
+.footer-bottom-icon {
+  margin-right: 2.5rem;
+}
+
+.footer-bottom p {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 150%;
+  opacity: 0.8;
+  max-width: 66rem;
+}

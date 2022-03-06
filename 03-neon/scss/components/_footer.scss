@@ -1,0 +1,129 @@
+.footer {
+  background-color: $primary-color;
+
+  &-top {
+    @include flex(center, space-between);
+    border-bottom: 2px rgba(73, 197, 253, 0.2) solid;
+    padding: 4.9rem 0;
+
+    &-network,
+    &-network ul {
+      @include flex(center);
+    }
+
+    &-network {
+      span {
+        color: $white;
+        font-size: 1.4rem;
+        line-height: 125%;
+        margin-right: 3rem;
+        opacity: 0.7;
+      }
+
+      ul li {
+        &:not(:first-child) {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+
+  &-main {
+    @include flex($justify: space-between);
+    border-bottom: 2px rgba(73, 197, 253, 0.2) solid;
+    column-gap: 3.2rem;
+    padding: 5.7rem 0 6.2rem;
+
+    &-left {
+      @include flex($justify: space-between);
+      column-gap: 3.2rem;
+      max-width: 86rem;
+      width: 100%;
+
+      &-item {
+        strong {
+          color: $white;
+          display: block;
+          font-family: $second-font;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 125%;
+          margin-bottom: 2.5rem;
+        }
+
+        li {
+          &:not(:first-child) {
+            margin-top: 2.9rem;
+          }
+
+          a {
+            color: $white;
+            font-family: $main-font;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+            opacity: 0.7;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &-right {
+      max-width: 28rem;
+      width: 100%;
+
+      &-info {
+        @include flex(center);
+        background-color: rgba(0, 165, 240, 0.23);
+        border-radius: 6px;
+        padding: 1.7rem 1.5rem 1.7rem 2.5rem;
+
+        img {
+          margin-right: 2.4rem;
+        }
+
+        div {
+          strong {
+            color: $white;
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 150%;
+          }
+
+          span {
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: $white;
+          }
+        }
+
+        & + & {
+          margin-top: 2.4rem;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    @include flex();
+    border-bottom: 4px $accent-color solid;
+    padding: 3.9rem 0 3.4rem;
+
+    &-icon {
+      margin-right: 2.5rem;
+    }
+
+    p {
+      color: $white;
+      font-size: 1.4rem;
+      line-height: 150%;
+      opacity: 0.8;
+      max-width: 66rem;
+    }
+  }
+}
