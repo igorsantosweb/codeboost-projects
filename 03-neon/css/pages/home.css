@@ -114,6 +114,7 @@
 .features .container {
   display: flex;
   justify-content: space-between;
+  column-gap: 3.2rem;
 }
 
 .features-left {
@@ -180,5 +181,113 @@
 
 .features-right {
   max-width: 80rem;
+  padding-top: 3rem;
   width: 100%;
+}
+
+.features-right-infos {
+  margin-bottom: 14.4rem;
+}
+
+.features-right-infos h2 {
+  margin-bottom: 1.6rem;
+  max-width: 48.8rem;
+}
+
+.features-right-infos ul {
+  margin-bottom: 3.2rem;
+}
+
+.features-right-infos ul li {
+  align-items: flex-start;
+  display: flex;
+  border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+  height: 12.8rem;
+  padding: 3.3rem 0 2.9rem;
+}
+
+.features-right-infos ul li div {
+  margin-left: 4.3rem;
+}
+
+.features-right-infos ul li div h3 {
+  color: #5f5c6b;
+}
+
+.features-right-infos ul li div p {
+  color: #7a7786;
+}
+
+.features-right-infos > a {
+  color: #0073ce;
+  letter-spacing: -0.5px;
+  line-height: 112%;
+  position: relative;
+}
+
+.features-right-infos > a::after {
+  content: '';
+  background-color: #ffc800;
+  display: inline-block;
+  height: 3px;
+  width: 10px;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+.features-right-account {
+  background: linear-gradient(100.52deg, #00a5f0 5.63%, #03e7e7 95.75%);
+  border-radius: 12px;
+}
+
+.features-right-account-box {
+  display: flex;
+  position: relative;
+  padding-left: 5.9rem;
+  padding-top: 7.9rem;
+  padding-bottom: 4rem;
+}
+
+.features-right-account-box > div {
+  max-width: 34rem;
+  width: 100%;
+}
+
+.features-right-account-box > div h2,
+.features-right-account-box > div h3,
+.features-right-account-box > div p {
+  color: #fff;
+}
+
+.features-right-account-box > div h2 {
+  margin-bottom: 1.1rem;
+}
+
+.features-right-account-box > div h3 {
+  margin-bottom: 0.8rem;
+}
+
+.features-right-account-box > div p {
+  font-size: 1.6rem;
+}
+
+.features-right-account-box > img {
+  margin-right: -93px;
+  margin-top: -40px;
+  position: relative;
+  right: -25px;
+}
+
+.features-right-account-box-btns {
+  margin-top: 3.1rem;
+}
+
+.features-right-account-box-btns button {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.features-right-account-box-btns button:not(:first-child) {
+  margin-left: 1.6rem;
 }

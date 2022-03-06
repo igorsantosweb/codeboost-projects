@@ -114,6 +114,7 @@
 
   .container {
     @include flex($justify: space-between);
+    column-gap: 3.2rem;
   }
 
   &-left {
@@ -180,6 +181,117 @@
 
   &-right {
     max-width: 80rem;
+    padding-top: 3rem;
     width: 100%;
+
+    &-infos {
+      margin-bottom: 14.4rem;
+
+      h2 {
+        margin-bottom: 1.6rem;
+        max-width: 48.8rem;
+      }
+
+      ul {
+        margin-bottom: 3.2rem;
+
+        li {
+          @include flex(flex-start);
+          border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+          height: 12.8rem;
+          padding: 3.3rem 0 2.9rem;
+
+          div {
+            margin-left: 4.3rem;
+
+            h3 {
+              color: $support-color-400;
+            }
+
+            p {
+              color: $support-color-300;
+            }
+          }
+        }
+      }
+
+      > a {
+        color: $primary-color;
+        letter-spacing: -0.5px;
+        line-height: 112%;
+        position: relative;
+
+        &::after {
+          content: '';
+          background-color: $accent-color;
+          display: inline-block;
+          height: 3px;
+          width: 10px;
+          margin-left: 8px;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+    &-account {
+      background: linear-gradient(
+        100.52deg,
+        $primary-color-normal 5.63%,
+        #03e7e7 95.75%
+      );
+      border-radius: 12px;
+
+      &-box {
+        @include flex();
+        position: relative;
+        padding-left: 5.9rem;
+        padding-top: 7.9rem;
+        padding-bottom: 4rem;
+
+        > div {
+          max-width: 34rem;
+          width: 100%;
+
+          h2,
+          h3,
+          p {
+            color: $white;
+          }
+
+          h2 {
+            margin-bottom: 1.1rem;
+          }
+
+          h3 {
+            margin-bottom: 0.8rem;
+          }
+
+          p {
+            font-size: 1.6rem;
+          }
+        }
+
+        > img {
+          margin-right: -93px;
+          margin-top: -40px;
+          position: relative;
+          right: -25px;
+        }
+
+        &-btns {
+          margin-top: 3.1rem;
+
+          button {
+            padding-left: 35px;
+            padding-right: 35px;
+
+            &:not(:first-child) {
+              margin-left: 1.6rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
