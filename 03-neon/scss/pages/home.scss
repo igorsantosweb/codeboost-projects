@@ -297,8 +297,6 @@
 }
 
 .testimonial {
-  padding-bottom: 13.4rem;
-
   padding-top: 13.4rem;
 
   &-top {
@@ -340,5 +338,98 @@
 
   &-main {
     overflow: hidden;
+  }
+}
+
+.digital-account {
+  padding-bottom: 8.6rem;
+  padding-top: 13.4rem;
+
+  .container {
+    @include flex($justify: space-between);
+    column-gap: 3.2rem;
+  }
+
+  &-left {
+    max-width: 54.2rem;
+
+    h2 {
+      margin-bottom: 4.5rem;
+
+      span {
+        color: #c6c5ce;
+        display: block;
+        font-family: $second-font;
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 112%;
+        letter-spacing: -1px;
+        margin-bottom: 0.9rem;
+        opacity: 0.8;
+      }
+    }
+
+    &-list {
+      margin-bottom: 4.9rem;
+
+      li {
+        @include flex();
+
+        &:not(:first-child) {
+          margin-top: 3.7rem;
+        }
+      }
+
+      &-icon {
+        @include flex(center, center);
+        background-color: $primary-color-light;
+        border-radius: 8px;
+        height: 4.5rem;
+        margin-right: 2.6rem;
+        width: 4.5rem;
+      }
+
+      &-text {
+        h4 {
+          color: $support-color-400;
+          margin-bottom: 0.4rem;
+        }
+
+        p {
+          color: $support-color-300;
+        }
+      }
+    }
+  }
+
+  &-right {
+    height: 59.8rem;
+    left: calc(11.8rem - 3.2rem); // 3.2rem -> gap column
+    margin-right: -6.9rem;
+    max-width: 71.1rem;
+    position: relative;
+    width: 100%;
+
+    img {
+      position: absolute;
+
+      &:nth-child(1) {
+        left: 0.6rem;
+        top: 7.8rem;
+        z-index: 3;
+      }
+
+      &:nth-child(2) {
+        left: 25.8rem;
+        top: 0.3rem;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+      }
+    }
   }
 }
