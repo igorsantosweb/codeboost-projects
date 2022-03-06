@@ -1,2 +1,110 @@
 @import '../config/variables';
 @import '../config/mixins';
+
+.hero {
+  background: url(../../img/bg-hero.svg) no-repeat center center;
+  height: 78.6rem;
+  padding-top: calc(9.2rem + 8.8rem);
+
+  .container {
+    display: flex;
+    grid-gap: 32px;
+  }
+
+  &-left {
+    max-width: 68.3rem;
+
+    h3 {
+      color: $white;
+      opacity: 0.8;
+      line-height: 120%;
+      margin-bottom: 3.1rem;
+    }
+
+    h1 {
+      color: $white;
+      margin-bottom: 3.9rem;
+    }
+
+    &-list {
+      @include flex(center, space-between);
+      margin-top: 6.4rem;
+      max-width: 61.5rem;
+
+      li {
+        @include flex(center);
+        max-width: 62.1rem;
+
+        .icon {
+          @include flex(center, center);
+          background: linear-gradient(
+            180deg,
+            rgba(53, 202, 226, 0.4) 0%,
+            rgba(53, 202, 226, 0) 100%
+          );
+          border-radius: 50%;
+          height: 4.8rem;
+          width: 4.8rem;
+        }
+
+        span {
+          color: $white;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-left: 1.2rem;
+          max-width: 12.7rem;
+        }
+      }
+    }
+  }
+
+  &-right {
+    margin-right: -205px;
+    width: 100%;
+
+    h2 {
+      color: #fff;
+      display: block;
+      font-size: 5.6rem;
+      font-weight: 600;
+      letter-spacing: -2px;
+      line-height: 8.4rem;
+      margin-bottom: 6.7rem;
+      margin-right: -25px;
+      opacity: 0.4;
+      position: relative;
+      right: -58px;
+    }
+
+    &-illustrations {
+      height: 54.1rem;
+      max-width: 70.6rem;
+      position: relative;
+      margin-left: -3.6rem;
+      margin-bottom: -7.8rem;
+      width: 100%;
+
+      img {
+        position: absolute;
+
+        &:nth-child(1) {
+          left: 0;
+          top: 4.1rem;
+          z-index: 3;
+        }
+
+        &:nth-child(2) {
+          bottom: 4.6rem;
+          right: 8.6rem;
+          z-index: 2;
+        }
+
+        &:nth-child(3) {
+          right: 4.3rem;
+          top: 2.8rem;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
