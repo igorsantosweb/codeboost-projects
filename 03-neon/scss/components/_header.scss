@@ -7,12 +7,22 @@
   top: 0;
   width: 100%;
 
+  &-logo {
+    @include responsive(768) {
+      max-width: 10.8rem;
+    }
+  }
+
   &-btn-mobile {
     display: none;
-    margin-left: 2.5rem;
+    margin-left: 4rem;
 
     @include responsive(991) {
       display: block;
+    }
+
+    @include responsive(600) {
+      margin-left: 2rem;
     }
   }
 
@@ -57,6 +67,10 @@
     button {
       line-height: 125%;
       padding: 1rem 1.8rem;
+
+      @include responsive(480) {
+        display: none;
+      }
     }
   }
 }

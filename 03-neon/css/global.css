@@ -147,14 +147,26 @@ h4 {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .header-logo {
+    max-width: 10.8rem;
+  }
+}
+
 .header-btn-mobile {
   display: none;
-  margin-left: 2.5rem;
+  margin-left: 4rem;
 }
 
 @media (max-width: 991px) {
   .header-btn-mobile {
     display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-btn-mobile {
+    margin-left: 2rem;
   }
 }
 
@@ -206,6 +218,12 @@ h4 {
 .header nav button {
   line-height: 125%;
   padding: 1rem 1.8rem;
+}
+
+@media (max-width: 480px) {
+  .header nav button {
+    display: none;
+  }
 }
 
 .testimonial-item {
