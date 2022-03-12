@@ -147,6 +147,17 @@ h4 {
   width: 100%;
 }
 
+.header-btn-mobile {
+  display: none;
+  margin-left: 2.5rem;
+}
+
+@media (max-width: 991px) {
+  .header-btn-mobile {
+    display: block;
+  }
+}
+
 .header .container {
   align-items: center;
   display: flex;
@@ -164,8 +175,26 @@ h4 {
   margin-right: 5.9rem;
 }
 
+@media (max-width: 1200px) {
+  .header nav ul {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .header nav ul {
+    display: none;
+  }
+}
+
 .header nav ul li:not(:first-child) {
   margin-left: 4.8rem;
+}
+
+@media (max-width: 1200px) {
+  .header nav ul li:not(:first-child) {
+    margin-left: 3.5rem;
+  }
 }
 
 .header nav ul a {

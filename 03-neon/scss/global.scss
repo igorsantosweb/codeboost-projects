@@ -1,6 +1,7 @@
 @import './config/reset';
 @import './config/container';
 @import './config/animate';
+@import './config/mixins'; // ARRUMAR ISSO DEPOIS (OS IMPORTS)
 
 @import './components/buttons';
 @import './components/titles';

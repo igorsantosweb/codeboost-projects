@@ -7,6 +7,15 @@
   top: 0;
   width: 100%;
 
+  &-btn-mobile {
+    display: none;
+    margin-left: 2.5rem;
+
+    @include responsive(991) {
+      display: block;
+    }
+  }
+
   .container {
     @include flex(center, space-between);
   }
@@ -20,9 +29,21 @@
     ul {
       margin-right: 5.9rem;
 
+      @include responsive(1200) {
+        margin-right: 3rem;
+      }
+
+      @include responsive(991) {
+        display: none;
+      }
+
       li {
         &:not(:first-child) {
           margin-left: 4.8rem;
+
+          @include responsive(1200) {
+            margin-left: 3.5rem;
+          }
         }
       }
 
