@@ -29,8 +29,20 @@
 }
 
 @mixin responsive($deviceWidth) {
+  @if ($deviceWidth == 1366) {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  }
+
   @if ($deviceWidth == 1200) {
     @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($deviceWidth == 1080) {
+    @media (max-width: 1080px) {
       @content;
     }
   }
