@@ -59,6 +59,12 @@
     }
   }
 
+  @if ($deviceWidth == 680) {
+    @media (max-width: 680px) {
+      @content;
+    }
+  }
+
   @if ($deviceWidth == 600) {
     @media (max-width: 600px) {
       @content;

@@ -127,6 +127,18 @@ h1 {
   }
 }
 
+@media (max-width: 680px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
 h2 {
   font-weight: bold;
   font-size: 4rem;
@@ -152,6 +164,12 @@ h4 {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 7.3rem;
+  }
 }
 
 @media (max-width: 768px) {
