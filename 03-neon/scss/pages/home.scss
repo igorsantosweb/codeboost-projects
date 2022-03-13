@@ -15,9 +15,20 @@
     padding-top: calc(5.5rem + 8.8rem);
   }
 
+  @include responsive(991) {
+    background-size: cover;
+    height: 89.1rem;
+    padding-top: calc(6.2rem + 8.8rem);
+  }
+
   .container {
     display: flex;
     grid-gap: 32px;
+
+    @include responsive(991) {
+      grid-row-gap: 4.5rem;
+      flex-direction: column;
+    }
   }
 
   &-left {
@@ -31,16 +42,34 @@
       max-width: 59rem;
     }
 
+    @include responsive(991) {
+      @include flex(center, $direction: column);
+      max-width: 100%;
+    }
+
     h3 {
       color: $white;
       opacity: 0.8;
       line-height: 120%;
       margin-bottom: 3.1rem;
+
+      @include responsive(991) {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+        text-align: center;
+      }
     }
 
     h1 {
       color: $white;
       margin-bottom: 3.9rem;
+
+      @include responsive(991) {
+        margin-bottom: 2.6rem;
+        max-width: 68.5rem;
+        padding-right: 0;
+        text-align: center;
+      }
     }
 
     &-list {
@@ -54,6 +83,12 @@
 
       @include responsive(1080) {
         max-width: 50rem;
+      }
+
+      @include responsive(991) {
+        margin-top: 3.9rem;
+        max-width: 58.8rem;
+        width: 100%;
       }
 
       li {
@@ -70,6 +105,11 @@
           border-radius: 50%;
           height: 4.8rem;
           width: 4.8rem;
+
+          @include responsive(991) {
+            height: 4.3rem;
+            width: 4.3rem;
+          }
         }
 
         span {
@@ -123,6 +163,14 @@
         font-size: 4rem;
         right: 4rem;
       }
+
+      @include responsive(991) {
+        margin-bottom: 2rem;
+        margin-right: 0;
+        padding-left: 0;
+        right: 0;
+        text-align: center;
+      }
     }
 
     &-illustrations {
@@ -135,6 +183,16 @@
 
       @include responsive(1366) {
         margin-left: -1.6rem;
+      }
+
+      @include responsive(1080) {
+        max-width: 45rem;
+      }
+
+      @include responsive(991) {
+        height: 42.4rem;
+        margin: 0 auto;
+        max-width: 51.1rem;
       }
 
       img {
@@ -153,6 +211,17 @@
             max-width: 37rem;
             top: 5em;
           }
+
+          @include responsive(1080) {
+            left: -7rem;
+            max-width: 34rem;
+            top: 3em;
+          }
+
+          @include responsive(991) {
+            left: -1rem;
+            top: 1rem;
+          }
         }
 
         &:nth-child(2) {
@@ -169,6 +238,17 @@
             max-width: 31rem;
             right: 11rem;
           }
+
+          @include responsive(1080) {
+            bottom: 12rem;
+            max-width: 27.4rem;
+            right: 9rem;
+          }
+
+          @include responsive(991) {
+            bottom: 7.6rem;
+            right: 3rem;
+          }
         }
 
         &:nth-child(3) {
@@ -182,6 +262,13 @@
 
           @include responsive(1080) {
             right: 5rem;
+            top: 2rem;
+          }
+
+          @include responsive(991) {
+            max-width: 43rem;
+            right: 1.3rem;
+            top: -2rem;
           }
         }
       }
