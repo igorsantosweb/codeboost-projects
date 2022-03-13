@@ -21,6 +21,11 @@
     padding-top: calc(6.2rem + 8.8rem);
   }
 
+  @include responsive(480) {
+    height: 739px;
+    padding-top: calc(5.1rem + 7.3rem);
+  }
+
   .container {
     display: flex;
     grid-gap: 32px;
@@ -58,6 +63,11 @@
         margin-bottom: 2.4rem;
         text-align: center;
       }
+
+      @include responsive(480) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
     }
 
     h1 {
@@ -69,6 +79,10 @@
         max-width: 68.5rem;
         padding-right: 0;
         text-align: center;
+      }
+
+      @include responsive(480) {
+        margin-bottom: 3.7rem;
       }
     }
 
@@ -91,9 +105,20 @@
         width: 100%;
       }
 
+      @include responsive(600) {
+        flex-direction: column;
+        max-width: 100%;
+      }
+
       li {
         @include flex(center);
         max-width: 62.1rem;
+
+        &:not(:first-child) {
+          @include responsive(480) {
+            margin-top: 1rem;
+          }
+        }
 
         .icon {
           @include flex(center, center);
@@ -110,6 +135,12 @@
             height: 4.3rem;
             width: 4.3rem;
           }
+
+          @include responsive(480) {
+            background: transparent;
+            height: 3rem;
+            width: 1.8rem;
+          }
         }
 
         span {
@@ -121,6 +152,21 @@
 
           @include responsive(1080) {
             font-size: 1.6rem;
+          }
+
+          @include responsive(600) {
+            max-width: 100%;
+            min-width: 21rem;
+          }
+
+          @include responsive(480) {
+            margin-left: 1.8rem;
+          }
+
+          br {
+            @include responsive(600) {
+              display: none;
+            }
           }
         }
       }
@@ -171,6 +217,10 @@
         right: 0;
         text-align: center;
       }
+
+      @include responsive(600) {
+        display: none;
+      }
     }
 
     &-illustrations {
@@ -193,6 +243,12 @@
         height: 42.4rem;
         margin: 0 auto;
         max-width: 51.1rem;
+      }
+
+      @include responsive(480) {
+        height: 27.1rem;
+        margin-left: 2rem;
+        max-width: 31.7rem;
       }
 
       img {
@@ -222,6 +278,15 @@
             left: -1rem;
             top: 1rem;
           }
+
+          @include responsive(600) {
+            top: 5rem;
+          }
+
+          @include responsive(480) {
+            top: 2rem;
+            width: 21.1rem;
+          }
         }
 
         &:nth-child(2) {
@@ -249,6 +314,17 @@
             bottom: 7.6rem;
             right: 3rem;
           }
+
+          @include responsive(600) {
+            bottom: 2rem;
+            right: 4rem;
+          }
+
+          @include responsive(480) {
+            bottom: 3.3rem;
+            right: 2rem;
+            max-width: 17rem;
+          }
         }
 
         &:nth-child(3) {
@@ -269,6 +345,15 @@
             max-width: 43rem;
             right: 1.3rem;
             top: -2rem;
+          }
+
+          @include responsive(600) {
+            top: 0;
+          }
+
+          @include responsive(480) {
+            max-width: 26.7rem;
+            right: 1rem;
           }
         }
       }
