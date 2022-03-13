@@ -6,6 +6,15 @@
   height: 78.6rem;
   padding-top: calc(9.2rem + 8.8rem);
 
+  @include responsive(1366) {
+    height: 73rem;
+  }
+
+  @include responsive(1080) {
+    height: 63rem;
+    padding-top: calc(5.5rem + 8.8rem);
+  }
+
   .container {
     display: flex;
     grid-gap: 32px;
@@ -13,6 +22,14 @@
 
   &-left {
     max-width: 68.3rem;
+
+    @include responsive(1200) {
+      max-width: 66rem;
+    }
+
+    @include responsive(1080) {
+      max-width: 59rem;
+    }
 
     h3 {
       color: $white;
@@ -30,6 +47,14 @@
       @include flex(center, space-between);
       margin-top: 6.4rem;
       max-width: 61.5rem;
+
+      @include responsive(1200) {
+        max-width: 57rem;
+      }
+
+      @include responsive(1080) {
+        max-width: 50rem;
+      }
 
       li {
         @include flex(center);
@@ -53,14 +78,26 @@
           line-height: 150%;
           margin-left: 1.2rem;
           max-width: 12.7rem;
+
+          @include responsive(1080) {
+            font-size: 1.6rem;
+          }
         }
       }
     }
   }
 
   &-right {
-    margin-right: -205px;
+    margin-right: -20.5rem;
     width: 100%;
+
+    @include responsive(1366) {
+      margin-right: -10rem;
+    }
+
+    @include responsive(1200) {
+      margin-right: -15rem;
+    }
 
     h2 {
       color: #fff;
@@ -74,6 +111,18 @@
       opacity: 0.4;
       position: relative;
       right: -58px;
+
+      @include responsive(1366) {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        right: 0;
+      }
+
+      @include responsive(1200) {
+        font-size: 4rem;
+        right: 4rem;
+      }
     }
 
     &-illustrations {
@@ -84,6 +133,10 @@
       margin-bottom: -7.8rem;
       width: 100%;
 
+      @include responsive(1366) {
+        margin-left: -1.6rem;
+      }
+
       img {
         position: absolute;
 
@@ -91,18 +144,45 @@
           left: 0;
           top: 4.1rem;
           z-index: 3;
+
+          @include responsive(1366) {
+            left: -10rem;
+          }
+
+          @include responsive(1200) {
+            max-width: 37rem;
+            top: 5em;
+          }
         }
 
         &:nth-child(2) {
           bottom: 4.6rem;
-          right: 8.6rem;
+          right: 11.6rem;
           z-index: 2;
+
+          @include responsive(1366) {
+            max-width: 32rem;
+            right: 10rem;
+          }
+
+          @include responsive(1200) {
+            max-width: 31rem;
+            right: 11rem;
+          }
         }
 
         &:nth-child(3) {
-          right: 4.3rem;
+          right: 8rem;
           top: 2.8rem;
           z-index: 1;
+
+          @include responsive(1200) {
+            top: 6rem;
+          }
+
+          @include responsive(1080) {
+            right: 5rem;
+          }
         }
       }
     }
