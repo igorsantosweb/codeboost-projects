@@ -48,7 +48,7 @@
     }
 
     @include responsive(991) {
-      @include flex(center, $direction: column);
+      @include flex(center, $direction: column, $setDisplayFlexProperty: false);
       max-width: 100%;
     }
 
