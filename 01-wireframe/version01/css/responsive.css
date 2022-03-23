@@ -208,6 +208,10 @@
 
 @media (max-width: 600px) {
   /* FEATURE */
+  .feature-cards-item {
+    width: 100%;
+  }
+
   .feature-area-thumb-item {
     width: calc((100% / 2) - 0.8rem);
   }
