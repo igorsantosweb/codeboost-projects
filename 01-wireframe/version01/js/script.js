@@ -26,8 +26,6 @@ function sectionScrollAnimation() {
 
         if (sectionTop - windowScrollHalf < 0) {
           section.classList.add('active');
-        } else {
-          section.classList.remove('active');
         }
       });
     }
