@@ -117,4 +117,15 @@
       color: $primary-color;
     }
   }
+
+  @if ($typeStyle == 'outline') {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
 }

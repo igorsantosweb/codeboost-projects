@@ -9,3 +9,7 @@ button.black {
 button.transparent {
   @include btn('transparent');
 }
+
+button.outline {
+  @include btn('outline');
+}
