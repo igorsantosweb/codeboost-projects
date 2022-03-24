@@ -39,7 +39,7 @@ a {
   color: $suport-color-100;
 
   &:hover {
-    color: $accent-color;
+    color: $accent-color !important;
   }
 }
 
