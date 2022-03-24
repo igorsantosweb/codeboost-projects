@@ -1,0 +1,11 @@
+button {
+  @include btn('primary');
+}
+
+button.black {
+  @include btn('black');
+}
+
+button.transparent {
+  @include btn('transparent');
+}
