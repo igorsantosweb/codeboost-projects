@@ -1,3 +1,5 @@
+@import './variables';
+
 *,
 *::after,
 *::before {
@@ -5,7 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter", arial, sans-serif;
+  font-family: $main-font;
   font-size: 1.6rem;
 }
 
@@ -27,18 +29,18 @@ a {
 }
 
 p {
-  color: #616161;
+  color: $suport-color-100;
 }
 
 a {
-  font-family: "Montserrat", arial, sans-serif;
+  font-family: $second-font;
   text-decoration: none;
   transition: 0.3s;
-  color: #616161;
-}
+  color: $suport-color-100;
 
-a:hover {
-  color: #ffce2e;
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 ul {
@@ -53,6 +55,6 @@ img {
 button {
   border: none;
   cursor: pointer;
-  font-family: "Montserrat", arial, sans-serif;
+  font-family: $second-font;
   line-height: 112.5%;
 }
