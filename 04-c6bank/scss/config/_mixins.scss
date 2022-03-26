@@ -78,7 +78,7 @@
   }
 }
 
-@mixin btn($typeStyle: 'primary', $padding: false) {
+@mixin btn($typeStyle: false, $padding: false) {
   @if ($typeStyle == 'primary') {
     border-radius: 100px;
     font-size: 1.5rem;
@@ -127,5 +127,9 @@
       background-color: $white;
       color: $black;
     }
+  }
+
+  @if ($padding) {
+    padding: $padding;
   }
 }
