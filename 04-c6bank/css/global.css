@@ -22,7 +22,7 @@ p,
 span,
 strong,
 a {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%;
 }
 
@@ -152,9 +152,40 @@ h4 {
   line-height: 150%;
 }
 
+.block-info {
+  max-width: 26rem;
+}
+
+.block-info-icon {
+  position: relative;
+  margin-bottom: 2.9rem;
+}
+
+.block-info-icon::after {
+  content: '';
+  background-color: #ffce2e;
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: -11px;
+  width: 15px;
+}
+
+.block-info h4 {
+  max-width: 22.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.block-info p {
+  max-width: 25.9rem;
+}
+
 .header {
-  background-color: #222;
   height: 7.2rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
 }
 

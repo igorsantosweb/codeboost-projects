@@ -1,0 +1,27 @@
+.block-info {
+  max-width: 26rem;
+
+  &-icon {
+    position: relative;
+    margin-bottom: 2.9rem;
+
+    &::after {
+      content: '';
+      background-color: $accent-color;
+      display: block;
+      height: 2px;
+      position: absolute;
+      bottom: -11px;
+      width: 15px;
+    }
+  }
+
+  h4 {
+    max-width: 22.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    max-width: 25.9rem;
+  }
+}
