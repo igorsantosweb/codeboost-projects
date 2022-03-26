@@ -111,3 +111,108 @@
 .zero-tariffs h3 {
   margin-bottom: 10rem;
 }
+
+.products {
+  padding-bottom: 13.4rem;
+}
+
+.products-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8.7rem;
+}
+
+.products-top nav ul {
+  align-items: center;
+  display: flex;
+  border: 1px solid #c4c4c4;
+  border-radius: 120px;
+  gap: 3.2rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.products-top nav ul li:first-child button {
+  padding: 1.8rem 8.4rem;
+}
+
+.products-top nav ul li:last-child button {
+  padding: 1.8rem 4.7rem;
+}
+
+.products-main {
+  display: flex;
+  justify-content: space-between;
+  background: url(../../img/account-bg.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 1.2rem;
+  max-height: 42.4rem;
+  padding: 9.7rem 7.2rem 5.3rem 10.3rem;
+  position: relative;
+}
+
+.products-main-left {
+  max-width: 34.1rem;
+}
+
+.products-main-left strong {
+  color: #fff;
+  display: block;
+  font-family: "Montserrat", arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  line-height: 130%;
+  margin-bottom: 1.6rem;
+}
+
+.products-main-left p {
+  margin-bottom: 5rem;
+}
+
+.products-main-left-approximation {
+  align-items: center;
+  display: flex;
+}
+
+.products-main-left-approximation span {
+  color: #fff;
+}
+
+.products-main-left-approximation div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 3.2rem;
+  margin-right: 1.6rem;
+  width: 3.2rem;
+}
+
+.products-main-right {
+  height: 63.7rem;
+  margin-top: -9.7rem;
+  max-width: 62.2rem;
+  position: relative;
+  top: -7.9rem;
+  width: 100%;
+}
+
+.products-main-right img {
+  position: absolute;
+}
+
+.products-main-right img:nth-child(1) {
+  z-index: 2;
+}
+
+.products-main-right img:nth-child(2) {
+  bottom: 0;
+  left: 4rem;
+}
+
+.products-main-right img:nth-child(3) {
+  bottom: 18.7rem;
+  right: 0;
+}
