@@ -63,6 +63,7 @@
 @media (max-width: 991px) {
   .hero-left {
     align-items: center;
+    display: flex;
     flex-direction: column;
     max-width: 100%;
   }
@@ -310,7 +311,6 @@
 @media (max-width: 480px) {
   .hero-right-illustrations {
     height: 27.1rem;
-    margin-left: 2rem;
     max-width: 31.7rem;
   }
 }
