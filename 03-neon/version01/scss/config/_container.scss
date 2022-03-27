@@ -13,4 +13,8 @@
   @include responsive(991) {
     padding: 0 4rem;
   }
+
+  @include responsive(600) {
+    padding: 0 2rem;
+  }
 }
