@@ -402,8 +402,11 @@
       margin-bottom: 13rem;
       position: relative;
 
-      @include responsive(600) {
+      @include responsive(991) {
         margin-bottom: 0;
+      }
+
+      @include responsive(600) {
         max-height: 50.3rem;
         margin-top: 4rem;
         overflow: hidden;
@@ -726,6 +729,10 @@
 .testimonial {
   padding-top: 13.4rem;
 
+  @include responsive(991) {
+    padding-top: 11rem;
+  }
+
   @include responsive(600) {
     padding-top: 7.6rem;
   }
@@ -734,7 +741,15 @@
     position: relative;
     margin-bottom: 4rem;
 
+    @include responsive(991) {
+      margin-bottom: 11rem;
+    }
+
     h2 {
+      @include responsive(991) {
+        text-align: center;
+      }
+
       span {
         color: #c6c5ce;
         display: block;
@@ -752,6 +767,12 @@
       left: unset;
       max-width: max-content;
       right: 0;
+
+      @include responsive(991) {
+        bottom: -5.1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       &-bullet {
         background-color: $accent-color-light;

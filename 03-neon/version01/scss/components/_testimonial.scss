@@ -8,6 +8,22 @@
   padding: 3.7rem 3.2rem 2.3rem;
   width: 100%;
 
+  @include responsive(1200) {
+    height: 24rem;
+  }
+
+  @include responsive(1080) {
+    height: 26rem;
+  }
+
+  @include responsive(768) {
+    height: 29rem;
+  }
+
+  @include responsive(600) {
+    height: 30rem;
+  }
+
   &-user {
     @include flex(center, space-between);
     margin-bottom: 2.1rem;
