@@ -347,6 +347,7 @@
           }
 
           @include responsive(600) {
+            right: 0;
             top: 0;
           }
 
@@ -363,9 +364,22 @@
 .features {
   padding-top: 12.9rem;
 
+  @include responsive(991) {
+    padding-top: 15.3rem;
+  }
+
+  @include responsive(480) {
+    padding-top: 8.6rem;
+  }
+
   .container {
     @include flex($justify: space-between);
     column-gap: 3.2rem;
+
+    @include responsive(991) {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
   }
 
   &-left {
@@ -387,6 +401,10 @@
           max-width: unset;
           position: absolute;
           top: 8.7rem;
+
+          @include responsive(991) {
+            display: none;
+          }
         }
       }
     }
@@ -435,32 +453,69 @@
     padding-top: 3rem;
     width: 100%;
 
+    @include responsive(991) {
+      max-width: 100%;
+      padding-top: 0;
+    }
+
+    @include responsive(600) {
+      margin-bottom: 4rem;
+    }
+
     &-infos {
       margin-bottom: 14.4rem;
+
+      @include responsive(991) {
+        margin-bottom: 5.7rem;
+      }
 
       h2 {
         margin-bottom: 1.6rem;
         max-width: 48.8rem;
+
+        @include responsive(991) {
+          margin-bottom: 2rem;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
       }
 
       ul {
         margin-bottom: 3.2rem;
 
+        @include responsive(991) {
+          margin-bottom: 4rem;
+        }
+
         li {
           @include flex(flex-start);
           border-bottom: 1px solid rgba(225, 224, 231, 0.9);
-          height: 12.8rem;
           padding: 3.3rem 0 2.9rem;
 
           div {
+            flex: 1;
             margin-left: 4.3rem;
+            padding-right: 0.8rem;
+
+            @include responsive(991) {
+              margin-left: 3rem;
+            }
 
             h3 {
               color: $support-color-400;
+
+              @include responsive(600) {
+                margin-bottom: 0.7rem;
+              }
             }
 
             p {
               color: $support-color-300;
+
+              @include responsive(600) {
+                font-size: 1.4rem;
+              }
             }
           }
         }
@@ -471,6 +526,13 @@
         letter-spacing: -0.5px;
         line-height: 112%;
         position: relative;
+
+        @include responsive(991) {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: max-content;
+        }
 
         &::after {
           content: '';

@@ -445,6 +445,7 @@
 
 @media (max-width: 600px) {
   .hero-right-illustrations img:nth-child(3) {
+    right: 0;
     top: 0;
   }
 }
@@ -460,10 +461,29 @@
   padding-top: 12.9rem;
 }
 
+@media (max-width: 991px) {
+  .features {
+    padding-top: 15.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding-top: 8.6rem;
+  }
+}
+
 .features .container {
   display: flex;
   justify-content: space-between;
   column-gap: 3.2rem;
+}
+
+@media (max-width: 991px) {
+  .features .container {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
 }
 
 .features-left {
@@ -486,6 +506,12 @@
   max-width: unset;
   position: absolute;
   top: 8.7rem;
+}
+
+@media (max-width: 991px) {
+  .features-left-mockup img:nth-child(2) {
+    display: none;
+  }
 }
 
 .features-left-app {
@@ -534,8 +560,27 @@
   width: 100%;
 }
 
+@media (max-width: 991px) {
+  .features-right {
+    max-width: 100%;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-right {
+    margin-bottom: 4rem;
+  }
+}
+
 .features-right-infos {
   margin-bottom: 14.4rem;
+}
+
+@media (max-width: 991px) {
+  .features-right-infos {
+    margin-bottom: 5.7rem;
+  }
 }
 
 .features-right-infos h2 {
@@ -543,28 +588,62 @@
   max-width: 48.8rem;
 }
 
+@media (max-width: 991px) {
+  .features-right-infos h2 {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
 .features-right-infos ul {
   margin-bottom: 3.2rem;
+}
+
+@media (max-width: 991px) {
+  .features-right-infos ul {
+    margin-bottom: 4rem;
+  }
 }
 
 .features-right-infos ul li {
   align-items: flex-start;
   display: flex;
   border-bottom: 1px solid rgba(225, 224, 231, 0.9);
-  height: 12.8rem;
   padding: 3.3rem 0 2.9rem;
 }
 
 .features-right-infos ul li div {
+  flex: 1;
   margin-left: 4.3rem;
+  padding-right: 0.8rem;
+}
+
+@media (max-width: 991px) {
+  .features-right-infos ul li div {
+    margin-left: 3rem;
+  }
 }
 
 .features-right-infos ul li div h3 {
   color: #5f5c6b;
 }
 
+@media (max-width: 600px) {
+  .features-right-infos ul li div h3 {
+    margin-bottom: 0.7rem;
+  }
+}
+
 .features-right-infos ul li div p {
   color: #7a7786;
+}
+
+@media (max-width: 600px) {
+  .features-right-infos ul li div p {
+    font-size: 1.4rem;
+  }
 }
 
 .features-right-infos > a {
@@ -572,6 +651,15 @@
   letter-spacing: -0.5px;
   line-height: 112%;
   position: relative;
+}
+
+@media (max-width: 991px) {
+  .features-right-infos > a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+  }
 }
 
 .features-right-infos > a::after {
