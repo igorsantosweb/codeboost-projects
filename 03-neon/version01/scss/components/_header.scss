@@ -40,8 +40,82 @@
   }
 
   nav {
+    .mobile {
+      display: none;
+      margin-top: 6rem !important;
+
+      &-sm {
+        display: none;
+
+        @include responsive(480) {
+          display: block;
+
+          button {
+            display: block;
+          }
+        }
+      }
+
+      @include responsive(991) {
+        display: block;
+      }
+
+      button.btn-close {
+        @include flex(center, center, column);
+        background-color: transparent;
+        border: 2px solid $white;
+        border-radius: 50%;
+        padding: 0;
+        height: 55px;
+        width: 55px;
+
+        span {
+          background-color: $white;
+          border-radius: 5px;
+          display: block;
+          height: 3px;
+          width: 22px;
+
+          & + span {
+            margin-top: 5px;
+          }
+
+          &:nth-child(1) {
+            transform: rotate(50deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-50deg);
+            margin-top: -11px;
+          }
+        }
+      }
+    }
+
     ul {
+      background-color: #02b3e3;
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
       margin-right: 5.9rem;
+      transition: top 0.3s ease-in 0.2s;
+      top: 200vh;
+      width: 100%;
+      z-index: 9999;
+
+      &.active {
+        @include responsive(991) {
+          display: flex;
+          position: absolute;
+          top: 0;
+        }
+      }
 
       @include responsive(1200) {
         margin-right: 3rem;
@@ -49,22 +123,6 @@
 
       @include responsive(991) {
         display: none;
-      }
-
-      &.active {
-        @include responsive(991) {
-          position: absolute;
-          display: block;
-          width: 100%;
-          background-color: #02b3e3;
-          left: 0;
-          top: 0;
-          height: 100vh;
-          z-index: 9999;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
       }
 
       li {
