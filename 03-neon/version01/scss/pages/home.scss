@@ -23,12 +23,6 @@
         @include flex(center);
         max-width: 62.1rem;
 
-        &:not(:first-child) {
-          @include responsive(480) {
-            margin-top: 1rem;
-          }
-        }
-
         .icon {
           @include flex(center, center);
           background: linear-gradient(
@@ -39,17 +33,6 @@
           border-radius: 50%;
           height: 4.8rem;
           width: 4.8rem;
-
-          @include responsive(991) {
-            height: 4.3rem;
-            width: 4.3rem;
-          }
-
-          @include responsive(480) {
-            background: transparent;
-            height: 3rem;
-            width: 1.8rem;
-          }
         }
 
         span {
@@ -58,25 +41,6 @@
           line-height: 150%;
           margin-left: 1.2rem;
           max-width: 12.7rem;
-
-          @include responsive(1080) {
-            font-size: 1.6rem;
-          }
-
-          @include responsive(600) {
-            max-width: 100%;
-            min-width: 21rem;
-          }
-
-          @include responsive(480) {
-            margin-left: 1.8rem;
-          }
-
-          br {
-            @include responsive(600) {
-              display: none;
-            }
-          }
         }
       }
     }
@@ -98,12 +62,35 @@
     margin-right: -20.5rem;
     width: 100%;
 
-    @include responsive(1366) {
-      margin-right: -10rem;
-    }
+    &-illustrations {
+      height: 54.1rem;
+      max-width: 70.6rem;
+      position: relative;
+      margin-left: -3.6rem;
+      margin-bottom: -7.8rem;
+      width: 100%;
 
-    @include responsive(1200) {
-      margin-right: -15rem;
+      img {
+        position: absolute;
+
+        &:nth-child(1) {
+          left: 0;
+          top: 4.1rem;
+          z-index: 3;
+        }
+
+        &:nth-child(2) {
+          bottom: 4.6rem;
+          right: 11.6rem;
+          z-index: 2;
+        }
+
+        &:nth-child(3) {
+          right: 8rem;
+          top: 2.8rem;
+          z-index: 1;
+        }
+      }
     }
 
     h2 {
@@ -118,166 +105,6 @@
       opacity: 0.4;
       position: relative;
       right: -58px;
-
-      @include responsive(1366) {
-        font-size: 4.5rem;
-        margin-bottom: 1rem;
-        padding-left: 2rem;
-        right: 0;
-      }
-
-      @include responsive(1200) {
-        font-size: 4rem;
-        right: 4rem;
-      }
-
-      @include responsive(991) {
-        margin-bottom: 2rem;
-        margin-right: 0;
-        padding-left: 0;
-        right: 0;
-        text-align: center;
-      }
-
-      @include responsive(600) {
-        display: none;
-      }
-    }
-
-    &-illustrations {
-      height: 54.1rem;
-      max-width: 70.6rem;
-      position: relative;
-      margin-left: -3.6rem;
-      margin-bottom: -7.8rem;
-      width: 100%;
-
-      @include responsive(1366) {
-        margin-left: -1.6rem;
-      }
-
-      @include responsive(1080) {
-        max-width: 45rem;
-      }
-
-      @include responsive(991) {
-        height: 42.4rem;
-        margin: 0 auto;
-        max-width: 51.1rem;
-      }
-
-      @include responsive(480) {
-        height: 27.1rem;
-        max-width: 31.7rem;
-      }
-
-      img {
-        position: absolute;
-
-        &:nth-child(1) {
-          left: 0;
-          top: 4.1rem;
-          z-index: 3;
-
-          @include responsive(1366) {
-            left: -10rem;
-          }
-
-          @include responsive(1200) {
-            max-width: 37rem;
-            top: 5em;
-          }
-
-          @include responsive(1080) {
-            left: -7rem;
-            max-width: 34rem;
-            top: 3em;
-          }
-
-          @include responsive(991) {
-            left: -1rem;
-            top: 1rem;
-          }
-
-          @include responsive(600) {
-            top: 5rem;
-          }
-
-          @include responsive(480) {
-            top: 2rem;
-            width: 21.1rem;
-          }
-        }
-
-        &:nth-child(2) {
-          bottom: 4.6rem;
-          right: 11.6rem;
-          z-index: 2;
-
-          @include responsive(1366) {
-            max-width: 32rem;
-            right: 10rem;
-          }
-
-          @include responsive(1200) {
-            max-width: 31rem;
-            right: 11rem;
-          }
-
-          @include responsive(1080) {
-            bottom: 12rem;
-            max-width: 27.4rem;
-            right: 9rem;
-          }
-
-          @include responsive(991) {
-            bottom: 7.6rem;
-            right: 3rem;
-          }
-
-          @include responsive(600) {
-            bottom: 2rem;
-            right: 4rem;
-          }
-
-          @include responsive(480) {
-            bottom: 3.3rem;
-            right: 2rem;
-            max-width: 17rem;
-          }
-        }
-
-        &:nth-child(3) {
-          right: 8rem;
-          top: 2.8rem;
-          z-index: 1;
-
-          @include responsive(1200) {
-            top: 6rem;
-          }
-
-          @include responsive(1080) {
-            right: 5rem;
-            top: 2rem;
-          }
-
-          @include responsive(991) {
-            max-width: 43rem;
-            right: 1.3rem;
-            top: -2rem;
-          }
-
-          @include responsive(600) {
-            right: 0;
-            top: 0;
-          }
-
-          @include responsive(480) {
-            max-width: 26.7rem;
-            right: 1rem;
-          }
-        }
-      }
     }
   }
 }
@@ -897,6 +724,32 @@
 @include responsive(1366) {
   .hero {
     height: 73rem;
+
+    &-right {
+      margin-right: -10rem;
+
+      &-illustrations {
+        margin-left: -1.6rem;
+
+        img {
+          &:nth-child(1) {
+            left: -10rem;
+          }
+
+          &:nth-child(2) {
+            max-width: 32rem;
+            right: 10rem;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        right: 0;
+      }
+    }
   }
 }
 
@@ -907,6 +760,33 @@
 
       &-list {
         max-width: 57rem;
+      }
+    }
+
+    &-right {
+      margin-right: -15rem;
+
+      &-illustrations {
+        img {
+          &:nth-child(1) {
+            max-width: 37rem;
+            top: 5em;
+          }
+
+          &:nth-child(2) {
+            max-width: 31rem;
+            right: 11rem;
+          }
+
+          &:nth-child(3) {
+            top: 6rem;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 4rem;
+        right: 4rem;
       }
     }
   }
@@ -922,6 +802,35 @@
 
       &-list {
         max-width: 50rem;
+
+        span {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &-right {
+      &-illustrations {
+        max-width: 45rem;
+
+        img {
+          &:nth-child(1) {
+            left: -7rem;
+            max-width: 34rem;
+            top: 3em;
+          }
+
+          &:nth-child(2) {
+            bottom: 12rem;
+            max-width: 27.4rem;
+            right: 9rem;
+          }
+
+          &:nth-child(3) {
+            right: 5rem;
+            top: 2rem;
+          }
+        }
       }
     }
   }
@@ -941,6 +850,13 @@
         margin-top: 3.9rem;
         max-width: 58.8rem;
         width: 100%;
+
+        li {
+          .icon {
+            height: 4.3rem;
+            width: 4.3rem;
+          }
+        }
       }
 
       h3 {
@@ -953,6 +869,40 @@
         margin-bottom: 2.6rem;
         max-width: 68.5rem;
         padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    &-right {
+      &-illustrations {
+        height: 42.4rem;
+        margin: 0 auto;
+        max-width: 51.1rem;
+
+        img {
+          &:nth-child(1) {
+            left: -1rem;
+            top: 1rem;
+          }
+
+          &:nth-child(2) {
+            bottom: 7.6rem;
+            right: 3rem;
+          }
+
+          &:nth-child(3) {
+            max-width: 43rem;
+            right: 1.3rem;
+            top: -2rem;
+          }
+        }
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+        margin-right: 0;
+        padding-left: 0;
+        right: 0;
         text-align: center;
       }
     }
@@ -970,6 +920,41 @@
       &-list {
         flex-direction: column;
         max-width: 100%;
+
+        li {
+          span {
+            max-width: 100%;
+            min-width: 21rem;
+          }
+        }
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &-right {
+      &-illustrations {
+        img {
+          &:nth-child(1) {
+            top: 5rem;
+          }
+
+          &:nth-child(2) {
+            bottom: 2rem;
+            right: 4rem;
+          }
+
+          &:nth-child(3) {
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+
+      h2 {
+        display: none;
       }
     }
   }
@@ -981,6 +966,24 @@
     padding-top: calc(5.1rem + 7.3rem);
 
     &-left {
+      &-list {
+        li {
+          &:not(:first-child) {
+            margin-top: 1rem;
+          }
+
+          .icon {
+            background: transparent;
+            height: 3rem;
+            width: 1.8rem;
+          }
+
+          span {
+            margin-left: 1.8rem;
+          }
+        }
+      }
+
       h3 {
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
@@ -988,6 +991,31 @@
 
       h1 {
         margin-bottom: 3.7rem;
+      }
+    }
+
+    &-right {
+      &-illustrations {
+        height: 27.1rem;
+        max-width: 31.7rem;
+
+        img {
+          &:nth-child(1) {
+            top: 2rem;
+            width: 21.1rem;
+          }
+
+          &:nth-child(2) {
+            bottom: 3.3rem;
+            right: 2rem;
+            max-width: 17rem;
+          }
+
+          &:nth-child(3) {
+            max-width: 26.7rem;
+            right: 1rem;
+          }
+        }
       }
     }
   }
