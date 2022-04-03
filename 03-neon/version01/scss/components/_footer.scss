@@ -6,45 +6,24 @@
     border-bottom: 2px rgba(73, 197, 253, 0.2) solid;
     padding: 4.9rem 0;
 
-    @include responsive(600) {
-      @include flex($direction: column, $setDisplayFlexProperty: false);
-      padding-top: 4.6rem;
-      padding-bottom: 4.3rem;
-    }
-
     &-network,
     &-network ul {
       @include flex(center);
     }
 
     &-network {
-      @include responsive(600) {
-        @include flex($direction: column, $setDisplayFlexProperty: false);
-      }
-
       span {
         color: $white;
         font-size: 1.4rem;
         line-height: 125%;
         margin-right: 3rem;
         opacity: 0.7;
-
-        @include responsive(600) {
-          margin-bottom: 2rem;
-          margin-right: 0;
-        }
       }
 
       ul li {
         &:not(:first-child) {
           margin-left: 3rem;
         }
-      }
-    }
-
-    > a {
-      @include responsive(600) {
-        margin-bottom: 3.2rem;
       }
     }
   }
@@ -55,47 +34,13 @@
     column-gap: 3.2rem;
     padding: 5.7rem 0 6.2rem;
 
-    @include responsive(1200) {
-      @include flex(center, $direction: column, $setDisplayFlexProperty: false);
-      row-gap: 3.2rem;
-    }
-
-    @include responsive(991) {
-      position: relative;
-    }
-
-    @include responsive(768) {
-      position: initial;
-    }
-
-    @include responsive(480) {
-      border-bottom: none;
-      padding-bottom: 5rem;
-      row-gap: 4rem;
-    }
-
     &-left {
       @include flex($justify: space-between);
       column-gap: 3.2rem;
       max-width: 86rem;
       width: 100%;
 
-      @include responsive(991) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        max-width: 100%;
-        row-gap: 7.6rem;
-      }
-
-      @include responsive(768) {
-        grid-template-columns: 1fr 1fr;
-      }
-
       &-item {
-        @include responsive(480) {
-          padding-right: 1.3rem;
-        }
-
         strong {
           color: $white;
           display: block;
@@ -131,69 +76,18 @@
       max-width: 28rem;
       width: 100%;
 
-      @include responsive(1200) {
-        @include flex(flex-start, center);
-        column-gap: 3.2rem;
-        max-width: 100%;
-      }
-
-      @include responsive(991) {
-        @include flex($direction: column, $setDisplayFlexProperty: false);
-        bottom: 10rem;
-        max-width: 100%;
-        min-width: 27.2rem;
-        position: absolute;
-        right: 0;
-        width: calc(100% - 69%);
-      }
-
-      @include responsive(768) {
-        min-width: 100%;
-        position: inherit;
-      }
-
       &-info {
         @include flex(center);
         background-color: rgba(0, 165, 240, 0.23);
         border-radius: 6px;
         padding: 1.7rem 1.5rem 1.7rem 2.5rem;
 
-        @include responsive(1200) {
-          margin-top: 0;
-          min-width: 26.5rem;
-        }
-
-        @include responsive(991) {
-          min-width: 100%;
-        }
-
-        @include responsive(768) {
-          flex-direction: column;
-        }
-
         & + & {
           margin-top: 2.4rem;
-
-          @include responsive(1200) {
-            margin-top: 0;
-          }
-
-          @include responsive(991) {
-            margin-top: 2.4rem;
-          }
         }
 
         img {
           margin-right: 2.4rem;
-
-          @include responsive(768) {
-            margin-bottom: 1.6rem;
-            margin-right: 0;
-          }
-
-          @include responsive(480) {
-            display: none;
-          }
         }
 
         div {
@@ -203,20 +97,12 @@
             font-size: 1.4rem;
             font-weight: bold;
             line-height: 150%;
-
-            @include responsive(991) {
-              text-align: center;
-            }
           }
 
           span {
             color: $white;
             font-size: 1.4rem;
             line-height: 150%;
-
-            @include responsive(991) {
-              text-align: center;
-            }
           }
         }
       }
@@ -228,20 +114,8 @@
     border-bottom: 4px $accent-color solid;
     padding: 3.9rem 0 3.4rem;
 
-    @include responsive(480) {
-      @include flex(center, $direction: column, $setDisplayFlexProperty: false);
-      margin: auto;
-      max-width: 29.6rem;
-      padding-top: 0;
-    }
-
     &-icon {
       margin-right: 2.5rem;
-
-      @include responsive(480) {
-        margin-bottom: 1.7rem;
-        margin-right: 0;
-      }
     }
 
     p {
@@ -250,8 +124,160 @@
       line-height: 150%;
       opacity: 0.8;
       max-width: 66rem;
+    }
+  }
+}
 
-      @include responsive(480) {
+@include responsive(1200) {
+  .footer {
+    &-main {
+      @include flex(center, $direction: column, $setDisplayFlexProperty: false);
+      row-gap: 3.2rem;
+
+      &-right {
+        @include flex(flex-start, center);
+        column-gap: 3.2rem;
+        max-width: 100%;
+
+        &-info {
+          margin-top: 0;
+          min-width: 26.5rem;
+
+          & + & {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(991) {
+  .footer {
+    &-main {
+      position: relative;
+
+      &-left {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 100%;
+        row-gap: 7.6rem;
+      }
+
+      &-right {
+        @include flex($direction: column, $setDisplayFlexProperty: false);
+        bottom: 10rem;
+        max-width: 100%;
+        min-width: 27.2rem;
+        position: absolute;
+        right: 0;
+        width: calc(100% - 69%);
+
+        &-info {
+          min-width: 100%;
+
+          & + & {
+            margin-top: 2.4rem;
+          }
+
+          div {
+            strong {
+              text-align: center;
+            }
+
+            span {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(768) {
+  .footer {
+    &-main {
+      position: initial;
+
+      &-left {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &-right {
+        min-width: 100%;
+        position: inherit;
+
+        &-info {
+          flex-direction: column;
+
+          img {
+            margin-bottom: 1.6rem;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(600) {
+  .footer {
+    &-top {
+      @include flex($direction: column, $setDisplayFlexProperty: false);
+      padding-top: 4.6rem;
+      padding-bottom: 4.3rem;
+
+      &-network {
+        @include flex($direction: column, $setDisplayFlexProperty: false);
+
+        span {
+          margin-bottom: 2rem;
+          margin-right: 0;
+        }
+      }
+
+      > a {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+}
+
+@include responsive(480) {
+  .footer {
+    &-main {
+      border-bottom: none;
+      padding-bottom: 5rem;
+      row-gap: 4rem;
+
+      &-left {
+        &-item {
+          padding-right: 1.3rem;
+        }
+      }
+
+      &-right {
+        &-info {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      @include flex(center, $direction: column, $setDisplayFlexProperty: false);
+      margin: auto;
+      max-width: 29.6rem;
+      padding-top: 0;
+
+      &-icon {
+        margin-bottom: 1.7rem;
+        margin-right: 0;
+      }
+
+      p {
         text-align: center;
       }
     }
