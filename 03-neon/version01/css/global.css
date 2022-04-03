@@ -209,33 +209,9 @@ h4 {
   width: 100%;
 }
 
-@media (max-width: 480px) {
-  .header {
-    height: 7.3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-logo {
-    max-width: 10.8rem;
-  }
-}
-
 .header-btn-mobile {
   display: none;
   margin-left: 4rem;
-}
-
-@media (max-width: 991px) {
-  .header-btn-mobile {
-    display: block;
-  }
-}
-
-@media (max-width: 600px) {
-  .header-btn-mobile {
-    margin-left: 2rem;
-  }
 }
 
 .header .container {
@@ -258,21 +234,6 @@ h4 {
 
 .header nav .mobile-sm {
   display: none;
-}
-
-@media (max-width: 480px) {
-  .header nav .mobile-sm {
-    display: block;
-  }
-  .header nav .mobile-sm button {
-    display: block;
-  }
-}
-
-@media (max-width: 991px) {
-  .header nav .mobile {
-    display: block;
-  }
 }
 
 .header nav .mobile button.btn-close {
@@ -314,54 +275,11 @@ h4 {
 }
 
 .header nav ul {
-  background-color: #02b3e3;
-  display: none;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  margin-right: 5.9rem;
-  transition: top 0.3s ease-in 0.2s;
-  top: 200vh;
-  width: 100%;
-  z-index: 9999;
-}
-
-@media (max-width: 991px) {
-  .header nav ul.active {
-    display: flex;
-    position: absolute;
-    top: 0;
-  }
-}
-
-@media (max-width: 1200px) {
-  .header nav ul {
-    margin-right: 3rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .header nav ul {
-    display: none;
-  }
+  margin-right: 3rem;
 }
 
 .header nav ul li:not(:first-child) {
   margin-left: 4.8rem;
-}
-
-@media (max-width: 1200px) {
-  .header nav ul li:not(:first-child) {
-    margin-left: 3.5rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .header nav ul li:not(:first-child) {
-    margin-left: 0;
-    margin-top: 3.5rem;
-  }
 }
 
 .header nav ul a {
@@ -375,7 +293,62 @@ h4 {
   padding: 1rem 1.8rem;
 }
 
+@media (max-width: 1200px) {
+  .header nav ul li:not(:first-child) {
+    margin-left: 3.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-logo {
+    max-width: 10.8rem;
+  }
+  .header-btn-mobile {
+    display: block;
+  }
+  .header nav .mobile-sm {
+    display: block;
+  }
+  .header nav ul {
+    background-color: #02b3e3;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    margin-right: 5.9rem;
+    transition: top 0.3s ease-in 0.2s;
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    z-index: 9999;
+  }
+  .header nav ul.active {
+    display: flex;
+    top: 0;
+  }
+  .header nav ul li:not(:first-child) {
+    margin-left: 0;
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-btn-mobile {
+    margin-left: 2rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .header {
+    height: 7.3rem;
+  }
+  .header nav .mobile-sm {
+    display: block;
+  }
+  .header nav .mobile-sm button {
+    display: block;
+  }
   .header nav button {
     display: none;
   }

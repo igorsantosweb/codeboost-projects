@@ -7,27 +7,9 @@
   top: 0;
   width: 100%;
 
-  @include responsive(480) {
-    height: 7.3rem;
-  }
-
-  &-logo {
-    @include responsive(768) {
-      max-width: 10.8rem;
-    }
-  }
-
   &-btn-mobile {
     display: none;
     margin-left: 4rem;
-
-    @include responsive(991) {
-      display: block;
-    }
-
-    @include responsive(600) {
-      margin-left: 2rem;
-    }
   }
 
   .container {
@@ -46,18 +28,6 @@
 
       &-sm {
         display: none;
-
-        @include responsive(480) {
-          display: block;
-
-          button {
-            display: block;
-          }
-        }
-      }
-
-      @include responsive(991) {
-        display: block;
       }
 
       button.btn-close {
@@ -97,46 +67,11 @@
     }
 
     ul {
-      background-color: #02b3e3;
-      display: none;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: center;
-      left: 0;
-      margin-right: 5.9rem;
-      transition: top 0.3s ease-in 0.2s;
-      top: 200vh;
-      width: 100%;
-      z-index: 9999;
-
-      &.active {
-        @include responsive(991) {
-          display: flex;
-          position: absolute;
-          top: 0;
-        }
-      }
-
-      @include responsive(1200) {
-        margin-right: 3rem;
-      }
-
-      @include responsive(991) {
-        display: none;
-      }
+      margin-right: 3rem;
 
       li {
         &:not(:first-child) {
           margin-left: 4.8rem;
-
-          @include responsive(1200) {
-            margin-left: 3.5rem;
-          }
-
-          @include responsive(991) {
-            margin-left: 0;
-            margin-top: 3.5rem;
-          }
         }
       }
 
@@ -150,8 +85,90 @@
     button {
       line-height: 125%;
       padding: 1rem 1.8rem;
+    }
+  }
 
-      @include responsive(480) {
+  @include responsive(1200) {
+    nav {
+      ul {
+        li {
+          &:not(:first-child) {
+            margin-left: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(991) {
+    &-logo {
+      max-width: 10.8rem;
+    }
+
+    &-btn-mobile {
+      display: block;
+    }
+
+    nav {
+      .mobile {
+        &-sm {
+          display: block;
+        }
+      }
+
+      ul {
+        background-color: #02b3e3;
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        margin-right: 5.9rem;
+        transition: top 0.3s ease-in 0.2s;
+        position: absolute;
+        top: 200vh;
+        width: 100%;
+        z-index: 9999;
+
+        &.active {
+          display: flex;
+          top: 0;
+        }
+
+        li {
+          &:not(:first-child) {
+            margin-left: 0;
+            margin-top: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(768) {
+  }
+
+  @include responsive(600) {
+    &-btn-mobile {
+      margin-left: 2rem;
+    }
+  }
+
+  @include responsive(480) {
+    height: 7.3rem;
+
+    nav {
+      .mobile {
+        &-sm {
+          display: block;
+
+          button {
+            display: block;
+          }
+        }
+      }
+
+      button {
         display: none;
       }
     }
