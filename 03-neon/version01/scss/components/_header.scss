@@ -32,15 +32,19 @@
 
       button.btn-close {
         @include flex(center, center, column);
-        background-color: transparent;
+        background-color: $white;
         border: 2px solid $white;
         border-radius: 50%;
-        padding: 0;
+        bottom: 50px;
         height: 55px;
+        left: 50%;
+        padding: 0;
+        position: absolute;
+        transform: translateX(-50%);
         width: 55px;
 
         span {
-          background-color: $white;
+          background-color: $primary-color-normal;
           border-radius: 5px;
           display: block;
           height: 3px;
@@ -124,21 +128,23 @@
         justify-content: center;
         left: 0;
         margin-right: 5.9rem;
-        transition: top 0.3s ease-in 0.2s;
-        position: absolute;
-        top: 200vh;
+        position: fixed;
         width: 100%;
         z-index: 9999;
 
         &.active {
+          animation: animaMenuMobile 0.3s forwards;
           display: flex;
-          top: 0;
         }
 
         li {
           &:not(:first-child) {
             margin-left: 0;
             margin-top: 3.5rem;
+          }
+
+          &.mobile {
+            display: block;
           }
         }
       }
@@ -172,5 +178,15 @@
         display: none;
       }
     }
+  }
+}
+
+@keyframes animaMenuMobile {
+  from {
+    top: 200vh;
+  }
+
+  to {
+    top: 0;
   }
 }

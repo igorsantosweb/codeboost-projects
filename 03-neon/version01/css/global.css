@@ -241,16 +241,20 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: transparent;
+  background-color: #fff;
   border: 2px solid #fff;
   border-radius: 50%;
-  padding: 0;
+  bottom: 50px;
   height: 55px;
+  left: 50%;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
   width: 55px;
 }
 
 .header nav .mobile button.btn-close span {
-  background-color: #fff;
+  background-color: #00a5f0;
   border-radius: 5px;
   display: block;
   height: 3px;
@@ -317,19 +321,20 @@ h4 {
     justify-content: center;
     left: 0;
     margin-right: 5.9rem;
-    transition: top 0.3s ease-in 0.2s;
-    position: absolute;
-    top: 200vh;
+    position: fixed;
     width: 100%;
     z-index: 9999;
   }
   .header nav ul.active {
+    animation: animaMenuMobile 0.3s forwards;
     display: flex;
-    top: 0;
   }
   .header nav ul li:not(:first-child) {
     margin-left: 0;
     margin-top: 3.5rem;
+  }
+  .header nav ul li.mobile {
+    display: block;
   }
 }
 
@@ -351,6 +356,15 @@ h4 {
   }
   .header nav button {
     display: none;
+  }
+}
+
+@keyframes animaMenuMobile {
+  from {
+    top: 200vh;
+  }
+  to {
+    top: 0;
   }
 }
 
