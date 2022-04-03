@@ -112,14 +112,6 @@
 .features {
   padding-top: 12.9rem;
 
-  @include responsive(991) {
-    padding-top: 15.3rem;
-  }
-
-  @include responsive(480) {
-    padding-top: 8.6rem;
-  }
-
   .container {
     @include flex($justify: space-between);
     column-gap: 3.2rem;
@@ -134,31 +126,9 @@
     max-width: 27.7rem;
     width: 100%;
 
-    @include responsive(991) {
-      @include flex($justify: space-between);
-      column-gap: 1.6rem;
-      max-width: 63rem;
-      width: 100%;
-    }
-
-    @include responsive(600) {
-      align-items: center;
-      flex-direction: column-reverse;
-    }
-
     &-mockup {
       margin-bottom: 13rem;
       position: relative;
-
-      @include responsive(991) {
-        margin-bottom: 0;
-      }
-
-      @include responsive(600) {
-        max-height: 50.3rem;
-        margin-top: 4rem;
-        overflow: hidden;
-      }
 
       img {
         &:nth-child(1) {
@@ -171,10 +141,6 @@
           max-width: unset;
           position: absolute;
           top: 8.7rem;
-
-          @include responsive(991) {
-            display: none;
-          }
         }
       }
     }
@@ -246,40 +212,16 @@
     padding-top: 3rem;
     width: 100%;
 
-    @include responsive(991) {
-      max-width: 100%;
-      padding-top: 0;
-    }
-
-    @include responsive(600) {
-      margin-bottom: 4rem;
-    }
-
     &-infos {
       margin-bottom: 14.4rem;
-
-      @include responsive(991) {
-        margin-bottom: 5.7rem;
-      }
 
       h2 {
         margin-bottom: 1.6rem;
         max-width: 48.8rem;
-
-        @include responsive(991) {
-          margin-bottom: 2rem;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-        }
       }
 
       ul {
         margin-bottom: 3.2rem;
-
-        @include responsive(991) {
-          margin-bottom: 4rem;
-        }
 
         li {
           @include flex(flex-start);
@@ -291,28 +233,12 @@
             margin-left: 4.3rem;
             padding-right: 0.8rem;
 
-            @include responsive(991) {
-              margin-left: 3rem;
-            }
-
-            @include responsive(600) {
-              margin-left: 2.3rem;
-            }
-
             h3 {
               color: $support-color-400;
-
-              @include responsive(600) {
-                margin-bottom: 0.7rem;
-              }
             }
 
             p {
               color: $support-color-300;
-
-              @include responsive(600) {
-                font-size: 1.4rem;
-              }
             }
           }
         }
@@ -323,13 +249,6 @@
         letter-spacing: -0.5px;
         line-height: 112%;
         position: relative;
-
-        @include responsive(991) {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          max-width: max-content;
-        }
 
         &::after {
           content: '';
@@ -352,15 +271,6 @@
       );
       border-radius: 12px;
 
-      @include responsive(991) {
-        margin: 0 auto 10rem;
-        max-width: 68.8rem;
-      }
-
-      @include responsive(768) {
-        margin-bottom: 9.3rem;
-      }
-
       &-box {
         @include flex();
         position: relative;
@@ -368,55 +278,22 @@
         padding-top: 7.9rem;
         padding-bottom: 4rem;
 
-        @include responsive(1200) {
-          @include flex(center, space-between, $setDisplayFlexProperty: false);
-          padding-left: 3rem;
-          padding-top: 3.9rem;
-        }
-
-        @include responsive(600) {
-          flex-direction: column;
-          padding: 4.3rem 2.7rem 0;
-        }
-
         > div {
           max-width: 34rem;
           width: 100%;
-
-          @include responsive(600) {
-            margin-bottom: 4.5rem;
-            max-width: 100%;
-          }
 
           h2,
           h3,
           p {
             color: $white;
-
-            @include responsive(600) {
-              text-align: center;
-            }
           }
 
           h2 {
             margin-bottom: 1.1rem;
-
-            @include responsive(768) {
-              font-size: 3.2rem;
-            }
-
-            @include responsive(600) {
-              font-size: 2.8rem;
-              margin-bottom: 1.4rem;
-            }
           }
 
           h3 {
             margin-bottom: 0.8rem;
-
-            @include responsive(680) {
-              font-size: 2rem;
-            }
           }
 
           p {
@@ -429,40 +306,14 @@
           margin-top: -4rem;
           position: relative;
           right: -2.5rem;
-
-          @include responsive(1200) {
-            margin-right: -6.7rem;
-            max-width: 34.3rem;
-            right: 0;
-          }
-
-          @include responsive(680) {
-            max-width: 30rem;
-          }
-
-          @include responsive(600) {
-            margin-bottom: -11rem;
-            margin-right: 0;
-            max-width: 125%;
-          }
         }
 
         &-btns {
           margin-top: 3.1rem;
 
-          @include responsive(600) {
-            @include flex($justify: center);
-          }
-
           button {
             padding-left: 35px;
             padding-right: 35px;
-
-            @include responsive(680) {
-              padding-left: 32px;
-              padding-right: 32px;
-              font-size: 1.4rem;
-            }
 
             &:not(:first-child) {
               margin-left: 1.6rem;
@@ -790,6 +641,24 @@
       }
     }
   }
+
+  .features {
+    &-right {
+      &-account {
+        &-box {
+          @include flex(center, space-between, $setDisplayFlexProperty: false);
+          padding-left: 3rem;
+          padding-top: 3.9rem;
+
+          > img {
+            margin-right: -6.7rem;
+            max-width: 34.3rem;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include responsive(1080) {
@@ -910,6 +779,111 @@
       flex-direction: column;
     }
   }
+
+  .features {
+    padding-top: 15.3rem;
+
+    &-left {
+      @include flex($justify: space-between);
+      column-gap: 1.6rem;
+      max-width: 63rem;
+      width: 100%;
+
+      &-mockup {
+        margin-bottom: 0;
+
+        img {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-right {
+      max-width: 100%;
+      padding-top: 0;
+
+      &-infos {
+        h2 {
+          margin-bottom: 2rem;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+
+        ul {
+          margin-bottom: 4rem;
+
+          li {
+            div {
+              margin-left: 3rem;
+            }
+          }
+        }
+
+        > a {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: max-content;
+        }
+      }
+
+      &-account {
+        margin: 0 auto 10rem;
+        max-width: 68.8rem;
+      }
+    }
+  }
+}
+
+@include responsive(768) {
+  .features {
+    &-right {
+      &-account {
+        margin-bottom: 9.3rem;
+
+        &-box {
+          > div {
+            h2 {
+              font-size: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(680) {
+  .features {
+    &-right {
+      &-account {
+        margin-bottom: 9.3rem;
+
+        &-box {
+          > div {
+            h3 {
+              font-size: 2rem;
+            }
+          }
+
+          > img {
+            max-width: 30rem;
+          }
+
+          &-btns {
+            button {
+              padding-left: 32px;
+              padding-right: 32px;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include responsive(600) {
@@ -953,6 +927,76 @@
 
       h2 {
         display: none;
+      }
+    }
+  }
+
+  .features {
+    &-left {
+      align-items: center;
+      flex-direction: column-reverse;
+
+      &-mockup {
+        max-height: 50.3rem;
+        margin-top: 4rem;
+        overflow: hidden;
+      }
+    }
+
+    &-right {
+      margin-bottom: 4rem;
+
+      &-infos {
+        margin-bottom: 5.7rem;
+
+        ul {
+          li {
+            div {
+              margin-left: 2.3rem;
+
+              h3 {
+                margin-bottom: 0.7rem;
+              }
+
+              p {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+
+      &-account {
+        &-box {
+          flex-direction: column;
+          padding: 4.3rem 2.7rem 0;
+
+          > div {
+            margin-bottom: 4.5rem;
+            max-width: 100%;
+
+            h2,
+            h3,
+            p {
+              text-align: center;
+            }
+
+            h2 {
+              font-size: 2.8rem;
+              margin-bottom: 1.4rem;
+            }
+          }
+
+          > img {
+            margin-bottom: -11rem;
+            margin-right: 0;
+            max-width: 125%;
+          }
+
+          &-btns {
+            @include flex($justify: center);
+          }
+        }
       }
     }
   }
@@ -1016,5 +1060,9 @@
         }
       }
     }
+  }
+
+  .features {
+    padding-top: 8.6rem;
   }
 }
