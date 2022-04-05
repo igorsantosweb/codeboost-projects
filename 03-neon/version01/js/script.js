@@ -21,3 +21,16 @@ function initMenuMobile() {
 
 initMenuMobile();
 window.addEventListener('resize', initMenuMobile);
+
+// Menu Scroll
+const header = document.querySelector('[data-header]');
+
+function fixedMenu() {
+  if(window.pageYOffset > 80) {
+    header.classList.add('fixed-menu');
+  } else {
+    header.classList.remove('fixed-menu');
+  }
+}
+
+document.addEventListener('scroll', fixedMenu);
