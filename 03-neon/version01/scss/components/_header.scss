@@ -12,8 +12,47 @@
     margin-left: 4rem;
   }
 
+  &.fixed-menu {
+    background-color: $white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .header-logo {
+      background-image: url(../../img/logo-active.svg);
+    }
+
+    nav {
+      ul a {
+        color: $support-color-400;
+      }
+
+      .outline-transparent {
+        border-color: $primary-color-normal;
+        color: $primary-color-normal;
+
+        &:hover {
+          background-color: $primary-color-normal;
+          color: $white;
+        }
+      }
+    }
+  }
+
   .container {
     @include flex(center, space-between);
+  }
+
+  .header-logo {
+    background: url(../../img/logo.svg) no-repeat center center;
+    background-size: 100%;
+    display: inline-block;
+    height: 30px;
+    transition: background-image 0.3s;
+    width: 132px;
   }
 
   nav,

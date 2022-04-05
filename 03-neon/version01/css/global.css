@@ -214,10 +214,47 @@ h4 {
   margin-left: 4rem;
 }
 
+.header.fixed-menu {
+  background-color: #fff;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header.fixed-menu .header-logo {
+  background-image: url(../../img/logo-active.svg);
+}
+
+.header.fixed-menu nav ul a {
+  color: #5f5c6b;
+}
+
+.header.fixed-menu nav .outline-transparent {
+  border-color: #00a5f0;
+  color: #00a5f0;
+}
+
+.header.fixed-menu nav .outline-transparent:hover {
+  background-color: #00a5f0;
+  color: #fff;
+}
+
 .header .container {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.header .header-logo {
+  background: url(../../img/logo.svg) no-repeat center center;
+  background-size: 100%;
+  display: inline-block;
+  height: 30px;
+  transition: background-image 0.3s;
+  width: 132px;
 }
 
 .header nav,
