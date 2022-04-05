@@ -55,6 +55,7 @@
 .zero-tariffs .container {
   display: flex;
   justify-content: space-between;
+  gap: 3.2rem;
 }
 
 .zero-tariffs-left {
@@ -106,6 +107,10 @@
 
 .zero-tariffs-right ul li:last-child {
   margin-top: -17.4rem;
+}
+
+.zero-tariffs-right ul li img {
+  border-radius: 10px;
 }
 
 .zero-tariffs h3 {
@@ -215,4 +220,45 @@
 .products-main-right img:nth-child(3) {
   bottom: 18.7rem;
   right: 0;
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    background-position: 55% 100%;
+  }
+  .hero-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .hero-content p,
+  .hero-content h1 {
+    text-align: center;
+    text-shadow: 1px 1px 4px #00000066;
+  }
+  .hero-content p {
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background: #222;
+    padding-bottom: 10.6rem;
+    padding-top: 16rem;
+    height: auto;
+  }
+  .hero-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0;
+  }
+  .hero-content-new span.flag {
+    display: none;
+  }
 }
