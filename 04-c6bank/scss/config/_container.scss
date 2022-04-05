@@ -1,6 +1,20 @@
+@import '../config/mixins';
+
 .container {
   margin: 0 auto;
   max-width: calc(121.6rem + 3rem);
   padding: 0 1.5rem;
   width: 100%;
+}
+
+@include responsive(991) {
+  .container {
+    padding: 0 2.4rem;
+  }
+}
+
+@include responsive(480) {
+  .container {
+    padding: 0 1.8rem;
+  }
 }
