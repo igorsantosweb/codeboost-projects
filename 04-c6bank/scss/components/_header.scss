@@ -42,7 +42,76 @@
     }
   }
 
+  &-right {
+    @include flex(center);
+
+    button.btn-mobile {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      margin-left: 2.4rem;
+      padding: 5px;
+
+      span {
+        background-color: $white;
+        border-radius: 2px;
+        height: 3px;
+        width: 28px;
+        display: block;
+        margin-left: auto;
+
+        &:nth-child(2) {
+          width: 32px;
+        }
+
+        &:nth-child(3) {
+          width: 28px;
+        }
+
+        + span {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
   .container {
     @include flex(center, space-between);
+  }
+}
+
+@include responsive(1080) {
+  .header {
+    &-left {
+      &-logo {
+        margin-right: 17rem;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  }
+}
+
+@include responsive(991) {
+  .header {
+    height: 8.8rem;
+
+    &-left {
+      &-logo {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include responsive(600) {
+  .header {
+    &-right {
+      button:not(.btn-mobile) {
+        display: none;
+      }
+    }
   }
 }

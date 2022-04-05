@@ -223,8 +223,66 @@ h4 {
   width: 7.5px;
 }
 
+.header-right {
+  align-items: center;
+  display: flex;
+}
+
+.header-right button.btn-mobile {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin-left: 2.4rem;
+  padding: 5px;
+}
+
+.header-right button.btn-mobile span {
+  background-color: #fff;
+  border-radius: 2px;
+  height: 3px;
+  width: 28px;
+  display: block;
+  margin-left: auto;
+}
+
+.header-right button.btn-mobile span:nth-child(2) {
+  width: 32px;
+}
+
+.header-right button.btn-mobile span:nth-child(3) {
+  width: 28px;
+}
+
+.header-right button.btn-mobile span + span {
+  margin-top: 8px;
+}
+
 .header .container {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+  .header-left-logo {
+    margin-right: 17rem;
+  }
+  .header-left nav {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    height: 8.8rem;
+  }
+  .header-left-logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-right button:not(.btn-mobile) {
+    display: none;
+  }
 }
