@@ -91,7 +91,7 @@
 
 .zero-tariffs-right ul li:first-child::after {
   content: '';
-  border-radius: 40px;
+  border-radius: 10px;
   box-shadow: 40px 55px 14px #49494930;
   display: block;
   height: 100%;
@@ -240,6 +240,12 @@
   .hero-content p {
     margin-bottom: 1.2rem;
   }
+  .zero-tariffs-right ul li {
+    width: calc(50% - 1.8rem);
+  }
+  .zero-tariffs-left ul li {
+    width: calc(50% - 1.6rem);
+  }
 }
 
 @media (max-width: 991px) {
@@ -252,6 +258,47 @@
   .hero-content {
     padding: 0 10px;
   }
+  .zero-tariffs {
+    flex-direction: column;
+    padding-top: 8rem;
+  }
+  .zero-tariffs .container {
+    flex-direction: column;
+  }
+  .zero-tariffs-left {
+    margin: 0 auto 6rem;
+    max-width: 70rem;
+  }
+  .zero-tariffs-left ul {
+    gap: 6.4rem 3.2rem;
+  }
+  .zero-tariffs-left ul li {
+    max-width: calc(50% - 1.6rem);
+  }
+  .zero-tariffs-left ul li p {
+    max-width: 100%;
+  }
+  .zero-tariffs-right {
+    flex-wrap: unset;
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .zero-tariffs-right ul {
+    flex-wrap: unset;
+  }
+  .zero-tariffs-right ul li {
+    margin-top: 0 !important;
+  }
+  .zero-tariffs-right ul li:first-child::after {
+    box-shadow: 2px 5px 14px #49494930;
+  }
+  .zero-tariffs h2 {
+    text-align: center;
+  }
+  .zero-tariffs h3 {
+    text-align: center;
+    margin-bottom: 6.4rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -259,6 +306,9 @@
     padding: 0;
   }
   .hero-content-new span.flag {
+    display: none;
+  }
+  .zero-tariffs {
     display: none;
   }
 }
