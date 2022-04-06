@@ -51,6 +51,7 @@
       border-radius: 0;
       margin-left: 2.4rem;
       padding: 5px;
+      display: none;
 
       span {
         background-color: $white;
@@ -89,6 +90,12 @@
 
       nav {
         display: none;
+      }
+    }
+
+    &-right {
+      button.btn-mobile {
+        display: block;
       }
     }
   }

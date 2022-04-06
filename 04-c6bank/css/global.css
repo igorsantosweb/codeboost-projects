@@ -252,6 +252,7 @@ h4 {
   border-radius: 0;
   margin-left: 2.4rem;
   padding: 5px;
+  display: none;
 }
 
 .header-right button.btn-mobile span {
@@ -287,6 +288,9 @@ h4 {
   }
   .header-left nav {
     display: none;
+  }
+  .header-right button.btn-mobile {
+    display: block;
   }
 }
 
