@@ -1,3 +1,11 @@
+function initMenuMobile() {
+  const isMobileDevice = window.matchMedia('(max-width: 991px)').matches;
+
+  if(isMobileDevice) {
+    handleActionsMenuMobile();
+  } 
+}
+
 function handleActionsMenuMobile() {
   const menuMobile = document.querySelector('[data-mobile="menu"]');
   const btnMobileOpen = document.querySelector('[data-mobile="btn-open"]');
@@ -11,15 +19,7 @@ function handleActionsMenuMobile() {
   btnMobileClose.addEventListener('click', toggleMenu);
 }
 
-function initMenuMobile() {
-  const isMobileDevice = window.matchMedia('(max-width: 991px)').matches;
-
-  if(isMobileDevice) {
-    handleActionsMenuMobile();
-  } 
-}
-
-initMenuMobile();
+window.addEventListener('load', initMenuMobile)
 window.addEventListener('resize', initMenuMobile);
 
 // Menu Scroll

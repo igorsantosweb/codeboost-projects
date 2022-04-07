@@ -225,7 +225,7 @@ h4 {
 }
 
 .header.fixed-menu .header-logo {
-  background-image: url(../../img/logo-active.svg);
+  background-image: url(../img/logo-active.svg);
 }
 
 .header.fixed-menu nav ul a {
@@ -249,7 +249,7 @@ h4 {
 }
 
 .header .header-logo {
-  background: url(../../img/logo.svg) no-repeat center center;
+  background: url(../img/logo.svg) no-repeat center center;
   background-size: 100%;
   display: inline-block;
   height: 30px;
