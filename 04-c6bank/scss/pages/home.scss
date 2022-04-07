@@ -333,6 +333,37 @@
   }
 
   .zero-tariffs {
-    display: none;
+    &-left ul li {
+      @include flex(center, $direction: column);
+      margin: auto;
+      max-width: 40rem !important;
+      width: 100% !important;
+
+      .block-info-icon::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      h4,
+      p {
+        text-align: center;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+
+    &-right {
+      display: none;
+    }
+  }
+}
+
+@include responsive(480) {
+  .zero-tariffs-left {
+    ul li {
+      max-width: 27rem !important;
+    }
   }
 }

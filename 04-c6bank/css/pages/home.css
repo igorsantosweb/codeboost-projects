@@ -308,7 +308,32 @@
   .hero-content-new span.flag {
     display: none;
   }
-  .zero-tariffs {
+  .zero-tariffs-left ul li {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 40rem !important;
+    width: 100% !important;
+  }
+  .zero-tariffs-left ul li .block-info-icon::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .zero-tariffs-left ul li h4,
+  .zero-tariffs-left ul li p {
+    text-align: center;
+  }
+  .zero-tariffs-left ul li img {
+    margin: auto;
+  }
+  .zero-tariffs-right {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .zero-tariffs-left ul li {
+    max-width: 27rem !important;
   }
 }
