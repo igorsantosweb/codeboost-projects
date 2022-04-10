@@ -207,7 +207,7 @@ h4 {
 .header {
   height: 7.2rem;
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   display: flex;
@@ -219,7 +219,13 @@ h4 {
 }
 
 .header-left-logo {
+  background-image: url(../img/icon/logo-white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 24px;
+  display: block;
   margin-right: 20rem;
+  width: 120px;
 }
 
 .header-left nav ul {
@@ -280,6 +286,24 @@ h4 {
 
 .header-right button.btn-mobile span + span {
   margin-top: 8px;
+}
+
+.header.active {
+  background-color: #fff;
+  position: fixed;
+  transition: 0.3s;
+}
+
+.header.active .header-left-logo {
+  background-image: url(../img/icon/logo-dark.svg);
+}
+
+.header.active .header-left nav li a {
+  color: #616161;
+}
+
+.header.active .header-right button.btn-mobile span {
+  background-color: #242424;
 }
 
 .header .container {
