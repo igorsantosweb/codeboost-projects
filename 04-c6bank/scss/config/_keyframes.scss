@@ -1,0 +1,11 @@
+@keyframes animaMenuFixed {
+  from {
+    opacity: 0;
+    top: -100%;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}

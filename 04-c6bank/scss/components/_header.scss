@@ -1,4 +1,5 @@
 @import '../config/variables';
+@import '../config/keyframes';
 
 .header {
   height: 7.2rem;
@@ -6,6 +7,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 999;
 
   @include flex();
 
@@ -85,7 +87,9 @@
   }
 
   &.active {
+    animation: animaMenuFixed 0.4s forwards;
     background-color: $white;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.18);
     position: fixed;
     transition: 0.3s;
 
