@@ -17,7 +17,7 @@
 
 <body>
   <header class="header" data-header>
-    <div class="container">
+    <div class="container" data-scroll="fadeDown">
       <div class="header-left">
         <a href="#" class="header-left-logo">
           <!-- Logo via CSS -->
@@ -43,7 +43,7 @@
 
   <main class="hero">
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content" data-scroll="fadeRight">
         <p class="hero-content-new">
           <span class="flag">Novo</span> Conheça nosso Programa de Pontos Átomos
         </p>
@@ -56,7 +56,7 @@
 
   <section class="zero-tariffs">
     <div class="container">
-      <div class="zero-tariffs-left">
+      <div class="zero-tariffs-left" data-scroll="fadeLeft">
         <h2>Sem tarifas:</h2>
         <h3>economize seu dinheiro</h3>
 
@@ -93,10 +93,10 @@
 
       <div class="zero-tariffs-right">
         <ul>
-          <li><img src="./img/c6-bank-white-card.png" alt="Cartão C6bank Branco"></li>
-          <li><img src="./img/c6-bank-blue-dark-card.png" alt="Cartão C6bank Azul Dark"></li>
-          <li><img src="./img/c6-bank-wine-card.png" alt="Cartão C6bank Wine"></li>
-          <li><img src="./img/c6-bank-blue-light-card.png" alt="Cartão C6bank Azul Light"></li>
+          <li><img data-scroll src="./img/c6-bank-white-card.png" alt="Cartão C6bank Branco"></li>
+          <li><img class="visible" data-scroll src="./img/c6-bank-blue-dark-card.png" alt="Cartão C6bank Azul Dark"></li>
+          <li><img data-scroll src="./img/c6-bank-wine-card.png" alt="Cartão C6bank Wine"></li>
+          <li><img data-scroll src="./img/c6-bank-blue-light-card.png" alt="Cartão C6bank Azul Light"></li>
         </ul>
       </div>
     </div>
@@ -104,7 +104,7 @@
 
   <section class="products">
     <div class="container">
-      <div class="products-top">
+      <div class="products-top" data-scroll="fadeDown">
         <div>
           <h2>Um banco completo</h2>
           <h3>com produtos exclusivos</h3>
@@ -118,7 +118,7 @@
         </nav>
       </div>
 
-      <div class="products-main">
+      <div class="products-main" data-scroll="fadeRight">
         <div class="products-main-left">
           <strong>Conta com cartão <br>C6 Business</strong>
           <p>A conta MEI é completa e não tem tarifa de manutenção. Além disso, você pode ter um cartão de crédito sem anuidade.</p>

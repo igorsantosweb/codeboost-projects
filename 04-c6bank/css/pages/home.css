@@ -89,10 +89,13 @@
   margin-top: 17.4rem;
 }
 
+.zero-tariffs-right ul li:first-child.visible::after {
+  box-shadow: 40px 55px 14px #49494930;
+}
+
 .zero-tariffs-right ul li:first-child::after {
   content: '';
   border-radius: 10px;
-  box-shadow: 40px 55px 14px #49494930;
   display: block;
   height: 100%;
   position: absolute;

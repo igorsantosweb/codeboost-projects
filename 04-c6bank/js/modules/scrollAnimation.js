@@ -1,16 +1,21 @@
 const scrollAnimation = () => {
-  const sections = document.querySelectorAll('[data-scroll]');
-  const windowScrollHalf = window.innerHeight * 0.5;
-
+  const elements = document.querySelectorAll('[data-scroll]');
+  
   function handleScrollWindow() {
-    sections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
+    const windowScrollHalf = window.innerHeight * 0.6;
 
-      if(sectionTop - windowScrollHalf) {
-        section.classList.add('visible');
+    elements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+
+      if(elementTop - windowScrollHalf < 0) {
+        element.classList.add('visible');
       }
     })
   }
 
   window.addEventListener('scroll', handleScrollWindow);
+
+  handleScrollWindow();
 }
+
+export default scrollAnimation;
