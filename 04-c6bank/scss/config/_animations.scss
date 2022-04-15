@@ -68,6 +68,18 @@
   }
 }
 
+@keyframes flipRight {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
 [data-scroll] {
   opacity: 0;
 
@@ -86,4 +98,9 @@
 
 [data-scroll='fadeDown'].visible {
   animation-name: fadeDown;
+}
+
+[data-scroll='flipRight'].visible {
+  animation-name: flipRight;
+  animation-duration: 1s;
 }

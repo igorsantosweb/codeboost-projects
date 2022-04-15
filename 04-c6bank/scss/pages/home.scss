@@ -83,12 +83,6 @@
           position: relative;
           margin-top: 17.4rem;
 
-          &.visible {
-            &::after {
-              box-shadow: 40px 55px 14px #49494930;
-            }
-          }
-
           &::after {
             content: '';
             border-radius: 10px;
@@ -99,9 +93,8 @@
             width: 100%;
           }
 
-          img {
-            z-index: 1;
-            position: relative;
+          img.visible {
+            box-shadow: 40px 55px 14px #49494930;
           }
         }
 
