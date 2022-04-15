@@ -6,6 +6,10 @@ const toggleMenuDropdown = () => {
     function toggleSubmenu(indexTarget) {
       submenus[indexTarget].classList.toggle('active');
     }
+
+    function removeSubmenu(indexTarget) {
+      submenus[indexTarget].classList.remove('active');
+    }
   
     links.forEach((link, index) => {
       link.addEventListener('click', (event) => {
@@ -16,7 +20,7 @@ const toggleMenuDropdown = () => {
     });
   
     submenus.forEach((submenu, index) => {
-      submenu.addEventListener('mouseleave', () => toggleSubmenu(index));
+      submenu.addEventListener('mouseleave', () => removeSubmenu(index));
     });
   }
 }
