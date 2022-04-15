@@ -56,18 +56,6 @@
   }
 }
 
-@keyframes flipEffect {
-  from {
-    opacity: 0;
-    transform: perspective(500px) rotateY(180deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: perspective(0) rotateY(0);
-  }
-}
-
 @keyframes flipRight {
   from {
     opacity: 0;
@@ -103,4 +91,12 @@
 [data-scroll='flipRight'].visible {
   animation-name: flipRight;
   animation-duration: 1s;
+}
+
+@include responsive(992) {
+  [data-scroll='flipRight'].visible-lg {
+    animation-name: flipRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
 }

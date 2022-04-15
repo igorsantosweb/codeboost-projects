@@ -92,10 +92,6 @@
             top: 0;
             width: 100%;
           }
-
-          img.visible {
-            box-shadow: 40px 55px 14px #49494930;
-          }
         }
 
         &:last-child {
@@ -318,8 +314,14 @@
         li {
           margin-top: 0 !important;
 
-          &:first-child::after {
-            box-shadow: 2px 5px 14px #49494930;
+          &:first-child {
+            position: relative;
+
+            img {
+              &.visible {
+                box-shadow: 2px 5px 14px #49494930;
+              }
+            }
           }
         }
       }
@@ -404,6 +406,20 @@
 
         img:nth-child(3) {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(992) {
+  .zero-tariffs {
+    &-right {
+      ul {
+        li:first-child {
+          img.visible {
+            box-shadow: 40px 55px 14px #49494930;
+          }
         }
       }
     }

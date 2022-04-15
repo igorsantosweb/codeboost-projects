@@ -99,10 +99,6 @@
   width: 100%;
 }
 
-.zero-tariffs-right ul li:first-child img.visible {
-  box-shadow: 40px 55px 14px #49494930;
-}
-
 .zero-tariffs-right ul li:last-child {
   margin-top: -17.4rem;
 }
@@ -299,7 +295,10 @@
   .zero-tariffs-right ul li {
     margin-top: 0 !important;
   }
-  .zero-tariffs-right ul li:first-child::after {
+  .zero-tariffs-right ul li:first-child {
+    position: relative;
+  }
+  .zero-tariffs-right ul li:first-child img.visible {
     box-shadow: 2px 5px 14px #49494930;
   }
   .zero-tariffs h2 {
@@ -364,6 +363,12 @@
   }
   .products-main-right img:nth-child(3) {
     display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .zero-tariffs-right ul li:first-child img.visible {
+    box-shadow: 40px 55px 14px #49494930;
   }
 }
 
