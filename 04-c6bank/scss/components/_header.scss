@@ -124,14 +124,12 @@
     padding: 12px 0;
     position: absolute;
     opacity: 0;
-    transform: translate3d(0, 30px, 0);
     width: 128px;
 
     &.active {
       animation: animaSubMenu 0.3s forwards;
       display: flex;
       opacity: 1;
-      transform: translate3d(0, 0, 0);
     }
 
     li {
@@ -169,12 +167,86 @@
 
       nav {
         display: none;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &.active {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100vh;
+            z-index: 999;
+        }
+
+        ul {
+          align-items: flex-start;
+          background: $white;
+          flex-direction: column;
+          height: 100vh;
+          padding: 10rem 3rem 1.5rem 1.5rem;
+          width: 320px;
+        }
+
+        li {
+          &.has-submenu {
+            width: 100%;
+
+            &:hover .submenu {
+              animation: unset !important;
+            }
+          }
+
+          + li {
+            margin-left: 0;
+            margin-top: 2rem;
+          }
+
+          a {
+            color: $suport-color-100;
+          }
+        }
       }
     }
 
     &-right {
       button.btn-mobile {
         display: block;
+      }
+    }
+
+    &-mobile-active {
+      .header-left-logo {
+        z-index: 9999;
+        background-image: url(../img/icon/logo-dark.svg);
+      }
+
+      .header-right {
+        z-index: 9999;
+      }
+    }
+
+    .submenu {
+      animation: unset !important;
+      background-color: $white;
+      display: none !important;
+      height: auto;
+      position: relative;
+      width: 100%;
+
+      &.active {
+        display: flex !important;
+      }
+
+      li {
+        + li {
+          margin-top: 12px;
+        }
+
+        a {
+          color: $suport-color-100;
+        }
       }
     }
   }

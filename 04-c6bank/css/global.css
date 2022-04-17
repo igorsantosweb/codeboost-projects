@@ -470,14 +470,14 @@ h4 {
     margin-right: 17rem;
   }
   .header-left nav {
-    display: flex;
+    display: none;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
   }
   .header-left nav.active {
-    display: block;
+    display: flex;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100vh;
@@ -487,20 +487,49 @@ h4 {
     align-items: flex-start;
     background: #fff;
     flex-direction: column;
-    padding-left: 5rem;
     height: 100vh;
-    padding-top: 10rem;
+    padding: 10rem 3rem 1.5rem 1.5rem;
     width: 320px;
   }
-  .header-left nav ul li + li {
+  .header-left nav li.has-submenu {
+    width: 100%;
+  }
+  .header-left nav li.has-submenu:hover .submenu {
+    animation: unset !important;
+  }
+  .header-left nav li + li {
     margin-left: 0;
     margin-top: 2rem;
   }
-  .header-left nav ul li a {
+  .header-left nav li a {
     color: #616161;
   }
   .header-right button.btn-mobile {
     display: block;
+  }
+  .header-mobile-active .header-left-logo {
+    z-index: 9999;
+    background-image: url(../img/icon/logo-dark.svg);
+  }
+  .header-mobile-active .header-right {
+    z-index: 9999;
+  }
+  .header .submenu {
+    animation: unset !important;
+    background-color: #fff;
+    display: none !important;
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+  .header .submenu.active {
+    display: flex !important;
+  }
+  .header .submenu li + li {
+    margin-top: 12px;
+  }
+  .header .submenu li a {
+    color: #616161;
   }
 }
 
