@@ -1,12 +1,13 @@
 const toggleMenuDropdown = () => {
   const links = document.querySelectorAll('[data-dropdown="link"]');
   const submenus = document.querySelectorAll('[data-dropdown="menu"]');
+  const isSmallDevice = window.matchMedia('(max-width: 1080px)').matches;
 
   if(links.length && submenus.length) {
     function toggleSubmenu(indexTarget) {
       submenus[indexTarget].classList.toggle('active');
 
-      initOutsideClick(links[indexTarget], () => {
+      !isSmallDevice && initOutsideClick(links[indexTarget], () => {
         submenus[indexTarget].classList.remove('active');
       });
     }
