@@ -5,16 +5,33 @@ const toggleMenuDropdown = () => {
   if(links.length && submenus.length) {
     function toggleSubmenu(indexTarget) {
       submenus[indexTarget].classList.toggle('active');
+
+      initOutsideClick(links[indexTarget], () => {
+        submenus[indexTarget].classList.remove('active');
+      });
+    }
+
+    function initOutsideClick(element, callback) {
+      const html = document.documentElement;
+      const outsideAttribute = 'data-outside';
+
+      if(!element.hasAttribute(outsideAttribute)) {
+        html.addEventListener('click', handleClickOutside);
+        element.setAttribute(outsideAttribute, '');
+      }
+
+      function handleClickOutside({ target }) {
+        if(!element.contains(target)) {
+          callback();
+          
+          element.removeAttribute(outsideAttribute, '');
+          html.removeEventListener('click', handleClickOutside);
+        }
+      }
     }
 
     function removeSubmenu(indexTarget) {
       submenus[indexTarget].classList.remove('active');
-    }
-
-    function handleClickOutSide(elementTarget) {
-      document.body.addEventListener('click', ({ target }) => {
-          console.log(elementTarget, target);
-      });
     }
   
     links.forEach((link, index) => {
@@ -22,7 +39,6 @@ const toggleMenuDropdown = () => {
         event.preventDefault();
   
         toggleSubmenu(index);
-        handleClickOutSide(link);
       });
     });
   
