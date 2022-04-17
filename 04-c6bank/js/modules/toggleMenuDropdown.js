@@ -10,12 +10,19 @@ const toggleMenuDropdown = () => {
     function removeSubmenu(indexTarget) {
       submenus[indexTarget].classList.remove('active');
     }
+
+    function handleClickOutSide(elementTarget) {
+      document.body.addEventListener('click', ({ target }) => {
+          console.log(elementTarget, target);
+      });
+    }
   
     links.forEach((link, index) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
   
         toggleSubmenu(index);
+        handleClickOutSide(link);
       });
     });
   
