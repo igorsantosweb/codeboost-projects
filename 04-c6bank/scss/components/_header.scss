@@ -186,7 +186,7 @@
           flex-direction: column;
           height: 100vh;
           padding: 10rem 3rem 1.5rem 1.5rem;
-          width: 320px;
+          width: 270px;
         }
 
         li {
@@ -224,6 +224,14 @@
 
       .header-right {
         z-index: 9999;
+      }
+    }
+
+    &-mobile-active.active {
+      .header-right {
+        button.btn-mobile span {
+          background-color: $white;
+        }
       }
     }
 

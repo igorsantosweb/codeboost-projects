@@ -514,6 +514,9 @@ h4 {
   .header-mobile-active .header-right {
     z-index: 9999;
   }
+  .header-mobile-active.active .header-right button.btn-mobile span {
+    background-color: #fff;
+  }
   .header .submenu {
     animation: unset !important;
     background-color: #fff;
