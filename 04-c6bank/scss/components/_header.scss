@@ -23,6 +23,10 @@
       width: 120px;
     }
 
+    .btn-account-open {
+      display: none;
+    }
+
     nav {
       ul {
         @include flex(center);
@@ -216,14 +220,27 @@
       }
     }
 
+    // Mobile Header active state
     &-mobile-active {
       .header-left-logo {
         z-index: 9999;
         background-image: url(../img/icon/logo-dark.svg);
       }
 
+      .header-left {
+        nav ul {
+          margin-left: 0%;
+          animation: fadeRight 0.4s forwards;
+        }
+      }
+
+      .header-right {
+        z-index: 9999;
+      }
+
       button.btn-mobile {
         span {
+          transition: 0.3s;
           
           &:nth-child(1) {
             transform: rotate(45deg);
@@ -232,6 +249,7 @@
           
           &:nth-child(2) {
             visibility: hidden;
+            opacity: 0;
           }
           
           &:nth-child(3) {
@@ -241,13 +259,9 @@
           }
         }
       }
-
-      .header-right {
-        z-index: 9999;
-      }
     }
 
-    // Scroll State
+    // Scroll active state
     &-mobile-active.active {
       .header-right {
         button.btn-mobile span {
@@ -295,6 +309,16 @@
 
 @include responsive(600) {
   .header {
+    &-left {
+      .btn-account-open {
+        display: flex;
+        
+        button {
+          padding: 1.1rem 4.5rem;
+        }
+      }
+    }
+
     &-right {
       button:not(.btn-mobile) {
         display: none;

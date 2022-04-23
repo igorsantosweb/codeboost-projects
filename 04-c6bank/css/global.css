@@ -337,6 +337,10 @@ h4 {
   width: 120px;
 }
 
+.header-left .btn-account-open {
+  display: none;
+}
+
 .header-left nav ul {
   align-items: center;
   display: flex;
@@ -511,20 +515,28 @@ h4 {
     z-index: 9999;
     background-image: url(../img/icon/logo-dark.svg);
   }
+  .header-mobile-active .header-left nav ul {
+    margin-left: 0%;
+    animation: fadeRight 0.4s forwards;
+  }
+  .header-mobile-active .header-right {
+    z-index: 9999;
+  }
+  .header-mobile-active button.btn-mobile span {
+    transition: 0.3s;
+  }
   .header-mobile-active button.btn-mobile span:nth-child(1) {
     transform: rotate(45deg);
     width: 100%;
   }
   .header-mobile-active button.btn-mobile span:nth-child(2) {
     visibility: hidden;
+    opacity: 0;
   }
   .header-mobile-active button.btn-mobile span:nth-child(3) {
     transform: rotate(-45deg);
     margin-top: -14px;
     width: 100%;
-  }
-  .header-mobile-active .header-right {
-    z-index: 9999;
   }
   .header-mobile-active.active .header-right button.btn-mobile span {
     background-color: #fff;
@@ -558,6 +570,12 @@ h4 {
 }
 
 @media (max-width: 600px) {
+  .header-left .btn-account-open {
+    display: flex;
+  }
+  .header-left .btn-account-open button {
+    padding: 1.1rem 4.5rem;
+  }
   .header-right button:not(.btn-mobile) {
     display: none;
   }
