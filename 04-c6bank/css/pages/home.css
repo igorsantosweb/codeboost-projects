@@ -154,21 +154,6 @@
   max-width: 34.1rem;
 }
 
-.products-main-left strong {
-  color: #fff;
-  display: block;
-  font-family: "Montserrat", arial, sans-serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  letter-spacing: -0.03rem;
-  line-height: 130%;
-  margin-bottom: 1.6rem;
-}
-
-.products-main-left p {
-  margin-bottom: 5rem;
-}
-
 .products-main-left-approximation {
   align-items: center;
   display: flex;
@@ -187,6 +172,35 @@
   height: 3.2rem;
   margin-right: 1.6rem;
   width: 3.2rem;
+}
+
+.products-main-left > div {
+  display: none;
+}
+
+.products-main-left > div.active {
+  animation: fadeRight 0.3s forwards;
+  display: block;
+}
+
+.products-main-left strong {
+  color: #fff;
+  display: block;
+  font-family: "Montserrat", arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  line-height: 130%;
+  margin-bottom: 1.6rem;
+}
+
+.products-main-left strong span {
+  color: #ffce2e;
+  font-weight: bold;
+}
+
+.products-main-left p {
+  margin-bottom: 5rem;
 }
 
 .products-main-right {

@@ -129,22 +129,36 @@
 
         <nav>
           <ul>
-            <li><button class="black">Para você</button></li>
-            <li><button class="transparent">Para sua empresa</button></li>
+            <li><button class="black" data-accordion="btn">Para você</button></li>
+            <li><button class="transparent" data-accordion="btn">Para sua empresa</button></li>
           </ul>
         </nav>
       </div>
 
       <div class="products-main" data-scroll="fadeRight">
         <div class="products-main-left">
-          <strong>Conta com cartão <br>C6 Business</strong>
-          <p>A conta MEI é completa e não tem tarifa de manutenção. Além disso, você pode ter um cartão de crédito sem anuidade.</p>
+          <div data-accordion="content">
+            <strong>Conta com cartão <br>C6 Business</strong>
+            <p>A conta MEI é completa e não tem tarifa de manutenção. Além disso, você pode ter um cartão de crédito sem anuidade.</p>
 
-          <div class="products-main-left-approximation">
-            <div>
-              <img src="./img/icon/approximation.svg" alt="Icone de aproximação">
+            <div class="products-main-left-approximation">
+              <div>
+                <img src="./img/icon/approximation.svg" alt="Icone de aproximação">
+              </div>
+              <span>Aproxime e pague</span>
             </div>
-            <span>Aproxime e pague</span>
+          </div>
+
+          <div data-accordion="content" class="active">
+            <strong>Conta com cartão <br>C6 Business <span>para Empresas</span></strong>
+            <p>A conta MEI é completa e não tem tarifa de manutenção.</p>
+
+            <div class="products-main-left-approximation">
+              <div>
+                <img src="./img/icon/approximation.svg" alt="Icone de aproximação">
+              </div>
+              <span>Aproxime e pague</span>
+            </div>
           </div>
         </div>
 
