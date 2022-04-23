@@ -489,7 +489,7 @@ h4 {
     flex-direction: column;
     height: 100vh;
     padding: 10rem 3rem 1.5rem 1.5rem;
-    width: 320px;
+    width: 270px;
   }
   .header-left nav li.has-submenu {
     width: 100%;
@@ -510,6 +510,18 @@ h4 {
   .header-mobile-active .header-left-logo {
     z-index: 9999;
     background-image: url(../img/icon/logo-dark.svg);
+  }
+  .header-mobile-active button.btn-mobile span:nth-child(1) {
+    transform: rotate(45deg);
+    width: 100%;
+  }
+  .header-mobile-active button.btn-mobile span:nth-child(2) {
+    visibility: hidden;
+  }
+  .header-mobile-active button.btn-mobile span:nth-child(3) {
+    transform: rotate(-45deg);
+    margin-top: -14px;
+    width: 100%;
   }
   .header-mobile-active .header-right {
     z-index: 9999;

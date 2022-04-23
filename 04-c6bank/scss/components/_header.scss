@@ -222,11 +222,32 @@
         background-image: url(../img/icon/logo-dark.svg);
       }
 
+      button.btn-mobile {
+        span {
+          
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            width: 100%;
+          }
+          
+          &:nth-child(2) {
+            visibility: hidden;
+          }
+          
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            margin-top: -14px;
+            width: 100%;
+          }
+        }
+      }
+
       .header-right {
         z-index: 9999;
       }
     }
 
+    // Scroll State
     &-mobile-active.active {
       .header-right {
         button.btn-mobile span {
