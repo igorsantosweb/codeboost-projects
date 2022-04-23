@@ -136,6 +136,14 @@
             padding: 1.8rem 4.7rem;
           }
         }
+
+        button {
+          @include btn('transparent');
+
+          &.active {
+            @include btn('black');
+          }
+        }
       }
     }
   }

@@ -139,6 +139,25 @@
   padding: 1.8rem 4.7rem;
 }
 
+.products-top nav ul li button {
+  background-color: transparent;
+  color: #242424;
+}
+
+.products-top nav ul li button:hover {
+  background-color: #616161;
+  color: #fff;
+}
+
+.products-top nav ul li button.active {
+  background-color: #242424;
+  color: #fff;
+}
+
+.products-top nav ul li button.active:hover {
+  background-color: #616161;
+}
+
 .products-main {
   display: flex;
   justify-content: space-between;
