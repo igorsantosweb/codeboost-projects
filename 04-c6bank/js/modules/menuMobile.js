@@ -7,17 +7,39 @@ const menuMobile = () => {
     const html = document.documentElement;
 
     function handleClickBtn() {
-      header.classList.toggle('header-mobile-active');
-      nav.classList.toggle('active');
+      const menuMobileIsAcitve = nav.classList.contains('active');
       
-      if(nav.classList.contains('active')) {
-        html.style = 'overflow: hidden';
+      if(menuMobileIsAcitve) {
+        closeMenuMobile();
       } else {
-        html.style = 'overflow: unset';
+        showMenuMobile();
       }
     }
 
+    function handleOutsideClickMenu({ target }) {
+      if(target === nav) {
+        closeMenuMobile();
+      } else {
+        console.log(target);
+      }
+    }
+
+    function showMenuMobile() {
+      header.classList.add('header-mobile-active');
+      nav.classList.add('active');
+
+      html.style = 'overflow: hidden';
+    }
+    
+    function closeMenuMobile() {
+      header.classList.remove('header-mobile-active');
+      nav.classList.remove('active');
+
+      html.style = 'overflow: unset';
+    }
+
     btn.addEventListener('click', handleClickBtn);
+    nav.addEventListener('click', handleOutsideClickMenu);
   }
 }
 
